@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>scumweb</title>
+		<link href="../../layout.css" rel="stylesheet" type="text/css">
+		<link href="../../classic.css" rel="stylesheet" type="text/css">
+		<link href="../../lib/os-gui/layout.css" rel="stylesheet" type="text/css">
+		<link href="../../lib/os-gui/windows-98.css" rel="stylesheet" type="text/css">
+<!--		<link href="../../bootstrap.css" rel="stylesheet" type="text/css">
+-->
+
+		<link rel="icon" href="../../images/icons/scumweb-16x16.png" sizes="16x16" type="image/png">
+		<link rel="icon" href="../../images/icons/scumweb-32x32.png" sizes="32x32" type="image/png">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+<!--		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+-->		
+		<script src="../../lib/jquery.min.js"></script>
+		<script src="../../lib/pep.js"></script>
+		<script src="../../lib/browserfs.js"></script>
+		<script src="../../src/filesystem-setup.js"></script>
+		<!-- <script src="../../lib/os-gui/$MenuBar.js"></script> -->
+		<script src="../../src/helpers.js"></script>
+		<script src="../../src/programs.js"></script>
+		<script src="../../src/$FolderView.js"></script>
+		<script src="../../src/$FolderViewIcon.js"></script>
+		<script src="menus.js"></script>
+		<script src="explorer.js"></script>
+		<script  src="script.js"></script>
+		<link href="explorer.css" rel="stylesheet" type="text/css">
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+<div id="scumweb">
+<!--		<div class="toolbar windows-explorer-toolbar"> -->
+			<div id="toolbar-buttons">
+				<!-- MUSIC BUTTON -->
+				<button class="btn btn-primary" type="button" class="launch" data-launch="spotifyPlayer" data-title="Spotify Player" data-icon="./images/icons/spotify-16x16.png" data-url="./programs/spotify-player/index.html" data-width="400" data-height="400"><img src="music.png" width="40" height="40"><br>music</button>
+
+				<!-- ONLY FANS BUTTON -->
+				<audio id="onlyfans-oh-yeah" src="onlyfans-oh-yeah.mp3" autostart="false" ></audio>
+				<button class="btn btn-primary" onclick="PlayOhYeah()"><img src="onlyfans.png" width="40" height="40"><br>only fans</button>
+			    <script>
+			    function PlayOhYeah() {
+		        	var onlyfanssound = document.getElementById("onlyfans-oh-yeah");
+        			onlyfanssound.play(); window.open('https://www.onlyfans.com/bigbabyscumbag', '_blank');
+    			}
+    			</script>
+    			<!-- MEMES BUTTON -->
+    			<audio id="rickroll" src="memes-troll.mp3" autostart="false" ></audio>
+				<button class="btn btn-primary" onclick="PlayRickRoll()"><img src="memes.png" width="40" height="40"><br>memes</button>
+			    <script>
+			    function PlayRickRoll() {
+		        	var memessound = document.getElementById("rickroll");
+        			memessound.play();
+    			}
+    			</script>
+				<!-- MONEY BUTTON -->
+				<audio id="ka-ching" src="ka-ching.mp3" autostart="false" ></audio>
+				<button class="btn btn-primary" onclick="PlayKaChing()"><img src="money.png" width="40" height="40"><br>money</button>
+				 <script>
+			    function PlayKaChing() {
+		        	var moneysound = document.getElementById("ka-ching");
+        			moneysound.play();
+    			}
+    			</script>
+
+				<!-- ANIME BUTTON -->
+				<audio id="anime-wow" src="anime-wow.mp3" autostart="false" ></audio>
+				<button class="btn btn-primary anime" onclick="PlayWow()"><img src="anime.png" width="40" height="40"><br>anime</button>
+				<script>
+			    function PlayWow() {
+		        	var animesound = document.getElementById("anime-wow");
+        			animesound.play();
+    			}
+    			</script>
+
+				<!-- BEER BUTTON -->
+				<audio id="beer-pour" src="beer-pour.mp3" autostart="false" ></audio>
+				<button class="btn btn-primary" onclick="PlayBeerPour()" data-toggle="modal" data-target="#beermodal"><img src="beer.png" width="40" height="40"><br>beer</button>
+				<script>
+			    function PlayBeerPour() {
+		        	var beersound = document.getElementById("beer-pour");
+        			beersound.play();
+    			}
+    			</script>
+
+		<!--		<script>
+    			var onlyfansAudioUrl = 'onlyfans-moan.mp3';
+				$('.onlyfans').click( () => new Audio(onlyfansAudioUrl).play() );
+    			var memesAudioUrl = 'memes-troll.mp3';
+				$('#memes').click( () => new Audio(memesAudioUrl).play() );
+    			</script>
+    	-->		
+				
+			<!--	<img src="/images/bbslogomini.png" width="40" height="49"> -->
+				<!-- <button class="lightweight" disabled id="paste">Paste</button>
+				<button class="lightweight" disabled id="undo">Undo</button>
+				<button class="lightweight" disabled id="delete">Delete</button>
+				<button class="lightweight" disabled id="properties">Properties</button>
+				<button class="lightweight" disabled id="view">View<button class="lightweight" disabled id="view-menu-button">&#x25BE;</button></button> -->
+			</div>
+<!--	</div> -->
+
+    <!-- Beer Modal -->
+
+<!--    <div class="modal fade" id="beermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1>BEER PICS GO HERE</h1>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+-->    
+
+    <!-- End Beer modal -->
+
+<!-- 
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+-->
+
+
+		<div id="address-bar">
+			<div id="location">location:</div>
+			<!-- TODO: compound input with an icon representing the resource, and a dropdown -->
+			<div id="address">
+				<div>www.flexonabitch.com</div>
+			</div>
+			
+		</div>
+		<!-- <div class="toolbar ie-toolbar">
+			<button class="lightweight" disabled id="back">Back</button>
+			<button class="lightweight" disabled id="forward">Forward</button>
+			<button class="lightweight" disabled id="stop">Stop</button>
+			<button class="lightweight" disabled id="refresh">Refresh</button>
+			<button class="lightweight" disabled id="home">Home</button>
+			<button class="lightweight" disabled id="search">Search</button>
+			<button class="lightweight" disabled id="favorites">Favorites</button>
+			<button class="lightweight" disabled id="history">History</button>
+			<button class="lightweight" disabled id="mail">Mail<button class="lightweight" disabled id="mail-menu-button">&#x25BE;</button></button>
+			<button class="lightweight" disabled id="print">Print</button>
+		</div> -->
+		<div id="content"></div>
+			<img src="content.png">
+</div>
+	</body>
+</html>

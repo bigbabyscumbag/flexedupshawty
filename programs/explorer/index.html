@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Explorer</title>
+		<link href="../../layout.css" rel="stylesheet" type="text/css">
+		<link href="../../classic.css" rel="stylesheet" type="text/css">
+		<link href="../../lib/os-gui/layout.css" rel="stylesheet" type="text/css">
+		<link href="../../lib/os-gui/windows-98.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../images/icons/explorer-16x16.png" sizes="16x16" type="image/png">
+		<link rel="icon" href="../../images/icons/explorer-32x32.png" sizes="32x32" type="image/png">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<script src="../../lib/jquery.min.js"></script>
+		<script src="../../lib/pep.js"></script>
+		<script src="../../lib/browserfs.js"></script>
+		<script src="../../src/filesystem-setup.js"></script>
+		<!-- <script src="../../lib/os-gui/$MenuBar.js"></script> -->
+		<script src="../../src/helpers.js"></script>
+		<script src="../../src/$FolderView.js"></script>
+		<script src="../../src/$FolderViewIcon.js"></script>
+		<script src="menus.js"></script>
+		<script src="explorer.js"></script>
+		<link href="explorer.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div id="address-bar">
+			<!-- TODO: compound input with an icon representing the resource, and a dropdown -->
+			<input type="text" id="address"/>
+			<button id="go">Go</button>
+		</div>
+		<div class="toolbar windows-explorer-toolbar">
+			<button class="lightweight" disabled id="back">Back</button>
+			<button class="lightweight" disabled id="forward">Forward</button>
+			<button class="lightweight" id="up">Up</button>
+			<button class="lightweight" disabled id="cut">Cut</button>
+			<button class="lightweight" disabled id="copy">Copy</button>
+			<button class="lightweight" disabled id="paste">Paste</button>
+			<button class="lightweight" disabled id="undo">Undo</button>
+			<button class="lightweight" id="delete">Delete</button>
+			<button class="lightweight" disabled id="properties">Properties</button>
+			<button class="lightweight" disabled id="view">View<button class="lightweight" disabled id="view-menu-button">&#x25BE;</button></button>
+		</div>
+		<!-- <div class="toolbar ie-toolbar">
+			<button class="lightweight" disabled id="back">Back</button>
+			<button class="lightweight" disabled id="forward">Forward</button>
+			<button class="lightweight" disabled id="stop">Stop</button>
+			<button class="lightweight" disabled id="refresh">Refresh</button>
+			<button class="lightweight" disabled id="home">Home</button>
+			<button class="lightweight" disabled id="search">Search</button>
+			<button class="lightweight" disabled id="favorites">Favorites</button>
+			<button class="lightweight" disabled id="history">History</button>
+			<button class="lightweight" disabled id="mail">Mail<button class="lightweight" disabled id="mail-menu-button">&#x25BE;</button></button>
+			<button class="lightweight" disabled id="print">Print</button>
+		</div> -->
+		<div id="content"></div>
+		<!-- TODO: status bar including thing that says "Internet" or "My Computer" -->
+
+		<!-- TODO: DRY -->
+		<svg style="position: absolute; pointer-events: none; bottom: 100%;">
+			<defs>
+				<filter id="disabled-inset-filter" x="0" y="0" width="1px" height="1px">
+					<feColorMatrix
+						in="SourceGraphic"
+						type="matrix"
+						values="
+							1 0 0 0 0
+							0 1 0 0 0
+							0 0 1 0 0
+							-2 -2 -2 4 0
+						"
+						result="dark-parts-isolated"
+					/>
+					<feFlood result="shadow-color" flood-color="var(--ButtonShadow)"/>
+					<feFlood result="hilight-color" flood-color="var(--ButtonHilight)"/>
+					<feOffset in="dark-parts-isolated" dx="1" dy="1" result="offset"/>
+					<feComposite in="hilight-color" in2="offset" operator="in" result="hilight-colored-offset"/>
+					<feComposite in="shadow-color" in2="dark-parts-isolated" operator="in" result="shadow-colored"/>
+					<feMerge>
+						<feMergeNode in="hilight-colored-offset"/>
+						<feMergeNode in="shadow-colored"/>
+					</feMerge>
+				</filter>
+			</defs>
+		</svg>
+	</body>
+</html>
