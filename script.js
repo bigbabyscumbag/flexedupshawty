@@ -201,7 +201,7 @@ $(document).ready(function() {
   setInterval(updateClock(), 1000);
   //start up music
   var audio = new Audio('http://www.winhistory.de/more/winstart/ogg/win98.ogg');
-  //audio.play();
+  audio.play();
   // toggle start menu 
   $("#startbutton").click(function() {
     $("#startbutton").toggleClass("startbutton-on");
@@ -305,7 +305,7 @@ $(document).ready(function() {
     }
   });
 
-  $("#desktop").on("dblclick", ".launch", function(event) {
+  $("#desktop").on("click", ".launch", function(event) {
     console.log($(this).data("launch"));
     var targetId = $(this).data("launch");
     var title = $(this).data("title");
