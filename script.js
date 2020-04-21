@@ -39,6 +39,8 @@ var getTopZIndex = function() {
 var openWindow = function(id) {
   $("#" + id).show();
   $("#" + id).css('z-index', getTopZIndex() + 1);
+  $("#" + id).css('left', 200);
+  $("#" + id).css('top', 50);
 };
 
 //Dynamically create start bar button and unhide program window already loaded in dom 
@@ -145,46 +147,46 @@ var minimiseProgram = function(id) {
   $("#start-bar" + id).toggleClass("focused");
 };
 
-var maximiseWindow = function(id) {
-  var targetId = $("#" + id);
+//var maximiseWindow = function(id) {
+//  var targetId = $("#" + id);
 
-  var originalPos = {
-    left: targetId.position().left,
-    top: targetId.position().top,
-    width: targetId.width(),
-    height: targetId.height()
-  };
+//  var originalPos = {
+//    left: targetId.position().left,
+//    top: targetId.position().top,
+//    width: targetId.width(),
+//    height: targetId.height()
+//  };
 
-  targetId.draggable("disable");
-  targetId.resizable("disable");
+//  targetId.draggable("disable");
+//  targetId.resizable("disable");
 
-  targetId.data("top", originalPos.top);
-  targetId.data("left", originalPos.left);
-  targetId.data("height", originalPos.height);
-  targetId.data("width", originalPos.width);
+//  targetId.data("top", originalPos.top);
+//  targetId.data("left", originalPos.left);
+//  targetId.data("height", originalPos.height);
+//  targetId.data("width", originalPos.width);
 
-  targetId.css({
-    top: 0,
-    left: 0,
-    width: $(window).width(),
-    height: $(window).height() - 38
-  });
+//  targetId.css({
+//    top: 0,
+//    left: 0,
+//    width: $(window).width(),
+//    height: $(window).height() - 38
+//  });
 
-};
+//};
 
-var unMaximiseWindow = function(id) {
-  var targetId = $("#" + id);
+//var unMaximiseWindow = function(id) {
+//  var targetId = $("#" + id);
 
-  targetId.draggable("enable");
-  targetId.resizable("enable");
+//  targetId.draggable("enable");
+//  targetId.resizable("enable");
 
-  targetId.css({
-    top: targetId.data("top"),
-    left: targetId.data("left"),
-    width: targetId.data("width"),
-    height: targetId.data("height")
-  })
-}
+//  targetId.css({
+//    top: targetId.data("top"),
+//    left: targetId.data("left"),
+//    width: targetId.data("width"),
+//    height: targetId.data("height")
+//  })
+//}
 
 var setIcon = function() {
   if ($(this).data("icon")) {
@@ -202,6 +204,25 @@ $(document).ready(function() {
   //start up music
   var audio = new Audio('http://www.winhistory.de/more/winstart/ogg/win98.ogg');
   audio.play();
+
+//this creates a *new* program window for scumweb on page load instead of opening the already existing scumweb program window. find fix.
+    var targetId = $(this).data("launch");
+    var title = "scumweb";
+    var imgUrl = "./images/icons/scumweb-16x16.png";
+    var url = "./programs/scumweb/index.html";
+    var width = "630";
+    var height = "570";
+    if (!isWindowOpen(targetId)) {
+      createProgram(targetId, title, imgUrl, url, width, height);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+    } else {
+      openWindow(targetId);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+      console.log("program already exists... opening window")
+    };
+
   // toggle start menu 
   $("#startbutton").click(function() {
     $("#startbutton").toggleClass("startbutton-on");
@@ -323,23 +344,23 @@ $(document).ready(function() {
     }
   });
 
-  $("#scumweb").on("click", ".launch", function(event) {
-    console.log($(this).data("launch"));
-    var targetId = $(this).data("launch");
-    var title = $(this).data("title");
-    var imgUrl = $(this).data("icon");
-    var url = $(this).data("url");
-    var width = $(this).data("width");
-    var height = $(this).data("height");
-    if (!isWindowOpen(targetId)) {
-      createProgram(targetId, title, imgUrl, url, width, height);
-      $("#startbutton").removeClass("startbutton-on");
-    } else {
-      openWindow(targetId);
-      $("#startbutton").removeClass("startbutton-on");
-      console.log("program already exists... opening window")
-    }
-  });
+//  $("#scumweb").on("click", ".launch", function(event) {
+//    console.log($(this).data("launch"));
+//    var targetId = $(this).data("launch");
+//    var title = $(this).data("title");
+//    var imgUrl = $(this).data("icon");
+//    var url = $(this).data("url");
+//    var width = $(this).data("width");
+//    var height = $(this).data("height");
+//    if (!isWindowOpen(targetId)) {
+//      createProgram(targetId, title, imgUrl, url, width, height);
+//      $("#startbutton").removeClass("startbutton-on");
+//    } else {
+//      openWindow(targetId);
+//      $("#startbutton").removeClass("startbutton-on");
+//      console.log("program already exists... opening window")
+//    }
+//  });
 
   $(".item").each(function() {
     if ($(this).data("icon")) {
