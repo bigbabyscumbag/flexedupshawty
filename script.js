@@ -43,6 +43,13 @@ var openWindow = function(id) {
   $("#" + id).css('top', 50);
 };
 
+// var openNewWindow = function(id) {
+//  $("#" + id).show();
+//  $("#" + id).css('z-index', getTopZIndex() + 1);
+//  $("#" + id).css('left', 88);
+//  $("#" + id).css('top', 10);
+// };
+
 //Dynamically create start bar button and unhide program window already loaded in dom 
 //var createProgram = function(id, title, imgUrl, url) {
 //  $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
