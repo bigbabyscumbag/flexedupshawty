@@ -411,8 +411,3 @@ html, body {
       button:focus span {
           border:1px dotted #AAA;
       }
-
-* {
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-}
