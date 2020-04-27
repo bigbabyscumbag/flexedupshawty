@@ -109,11 +109,11 @@ var openWindow = function(id) {
     containment: "window",
     stack: ".window"
   });
-  $(".window").resizable({
-    handles: "n, e, s, w, ne, se, sw, nw",
-    minHeight: 250,
-    minWidth: 350
-  });
+  //$(".window").resizable({
+  //  handles: "n, e, s, w, ne, se, sw, nw",
+  //  minHeight: 250,
+  //  minWidth: 350
+  //});
   // Prevent windows from moving on sibling being resized or closed
   $(".window").css({
     position: "absolute"
@@ -215,7 +215,7 @@ $(document).ready(function() {
 //this creates a *new* program window for scumweb on page load instead of opening the already existing scumweb program window. find fix.
     var targetId = $(this).data("launch");
     var title = "scumweb";
-    var imgUrl = "./images/icons/scumweb-16x16.png";
+    var imgUrl = "./images/icons/internet-explorer-16x16.png";
     var url = "./programs/scumweb/index.html";
     var width = "630";
     var height = "570";
