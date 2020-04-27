@@ -37,10 +37,19 @@ var getTopZIndex = function() {
 };
 
 var openWindow = function(id) {
-  $("#" + id).show();
-  $("#" + id).css('z-index', getTopZIndex() + 1);
-  $("#" + id).css('left', 200);
-  $("#" + id).css('top', 50);
+  let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  if (isMobile) {
+      $("#" + id).show();
+      $("#" + id).css('z-index', getTopZIndex() + 1);
+      $("#" + id).css('left', 150);
+      $("#" + id).css('top', 50);
+    } else {
+      $("#" + id).show();
+      $("#" + id).css('z-index', getTopZIndex() + 1);
+      $("#" + id).css('left', 200);
+      $("#" + id).css('top', 50);      
+    }
+  
 };
 
 // var openNewWindow = function(id) {
@@ -213,6 +222,25 @@ $(document).ready(function() {
   audio.play();
 
 //this creates a *new* program window for scumweb on page load instead of opening the already existing scumweb program window. find fix.
+let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  if (isMobile) {
+    var targetId = $(this).data("launch");
+    var title = "scumweb";
+    var imgUrl = "./images/icons/internet-explorer-16x16.png";
+    var url = "./programs/scumweb/index.html";
+    var width = "100%";
+    var height = "400";
+    if (!isWindowOpen(targetId)) {
+      createProgram(targetId, title, imgUrl, url, width, height);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+    } else {
+      openWindow(targetId);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+      console.log("program already exists... opening window")
+    };
+    } else {
     var targetId = $(this).data("launch");
     var title = "scumweb";
     var imgUrl = "./images/icons/internet-explorer-16x16.png";
@@ -228,7 +256,10 @@ $(document).ready(function() {
       $('#menu').hide();
       $("#startbutton").removeClass("startbutton-on");
       console.log("program already exists... opening window")
-    };
+    };   
+    }
+
+
 
   // toggle start menu 
   $("#startbutton").click(function() {
@@ -351,7 +382,7 @@ $(document).ready(function() {
     }
   });
 
-$("#scumweb").on("click", ".launch", function(event) {
+  $("#scumweb").on("click", ".launch", function(event) {
     console.log($(this).data("launch"));
     var targetId = $(this).data("launch");
     var title = $(this).data("title");
