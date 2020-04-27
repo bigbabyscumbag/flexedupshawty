@@ -75,12 +75,12 @@ html, body {
 }
 
 .startbar {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   display: block;
   height: 38px;
-  width: 100vw;
+  width: 100%;
   background-color: #bdbebd;
   border-top: 2px solid white;
   padding: 3px;
@@ -385,8 +385,8 @@ html, body {
         border-left:4px outset #FFF;
         border-bottom:4px outset #000;
         border-right:4px outset #000;
-        color:#c0c0c0;
-        background-color:#c0c0c0;
+        color:#000;
+        background-color:#CBD1D2;
         padding:20px 40px;
         font-weight:800;
       }
