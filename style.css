@@ -30,6 +30,7 @@ html, body {
   vertical-align: bottom;
   margin: 10px 10px;
   text-align: center;
+  position: relative;
 }
 /*.desktop-icon .icon-wrapper {
   display: inline-block;

@@ -351,23 +351,23 @@ $(document).ready(function() {
     }
   });
 
-//  $("#scumweb").on("click", ".launch", function(event) {
-//    console.log($(this).data("launch"));
-//    var targetId = $(this).data("launch");
-//    var title = $(this).data("title");
-//    var imgUrl = $(this).data("icon");
-//    var url = $(this).data("url");
-//    var width = $(this).data("width");
-//    var height = $(this).data("height");
-//    if (!isWindowOpen(targetId)) {
-//      createProgram(targetId, title, imgUrl, url, width, height);
-//      $("#startbutton").removeClass("startbutton-on");
-//    } else {
-//      openWindow(targetId);
-//      $("#startbutton").removeClass("startbutton-on");
-//      console.log("program already exists... opening window")
-//    }
-//  });
+$("#scumweb").on("click", ".launch", function(event) {
+    console.log($(this).data("launch"));
+    var targetId = $(this).data("launch");
+    var title = $(this).data("title");
+    var imgUrl = $(this).data("icon");
+    var url = $(this).data("url");
+    var width = $(this).data("width");
+    var height = $(this).data("height");
+    if (!isWindowOpen(targetId)) {
+      createProgram(targetId, title, imgUrl, url, width, height);
+      $("#startbutton").removeClass("startbutton-on");
+    } else {
+      openWindow(targetId);
+      $("#startbutton").removeClass("startbutton-on");
+      console.log("program already exists... opening window")
+    }
+  });
 
   $(".item").each(function() {
     if ($(this).data("icon")) {
