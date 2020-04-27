@@ -75,7 +75,7 @@ html, body {
 }
 
 .startbar {
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 0;
   display: block;
