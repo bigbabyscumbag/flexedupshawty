@@ -30,7 +30,6 @@ html, body {
   vertical-align: bottom;
   margin: 10px 10px;
   text-align: center;
-  position: relative;
 }
 /*.desktop-icon .icon-wrapper {
   display: inline-block;
@@ -54,7 +53,6 @@ html, body {
   color: white;
   position: relative;
   display: auto;
-  vertical-align: bottom; /* with inline-block, always */
 }
 /*.desktop-icon.selected .title {
   background: var(--Hilight);
