@@ -26,7 +26,7 @@
 <!--		<div class="toolbar windows-explorer-toolbar"> -->
 			<div id="toolbar-buttons">
 				<!-- MUSIC BUTTON -->
-				<button class="btn btn-primary" type="button" class="launch" data-launch="spotifyPlayer" data-title="Spotify Player" data-icon="./images/icons/spotify-16x16.png" data-url="./programs/spotify-player/index.html" data-width="400" data-height="400"><img src="music.png" width="40" height="40"><br>music</button>
+				<button id="spotify" class="btn btn-primary" type="button"><img src="music.png" width="40" height="40"><br>music</button>
 
 				<!-- ONLY FANS BUTTON -->
 				<audio id="onlyfans-oh-yeah" src="onlyfans-oh-yeah.mp3" autostart="false" ></audio>
@@ -47,11 +47,11 @@
     			}
     			</script>
 				<!-- MONEY BUTTON -->
-				<audio id="ka-ching" src="ka-ching.mp3" autostart="false" ></audio>
-				<button class="btn btn-primary" onclick="PlayKaChing()"><img src="money.png" width="40" height="40"><br>money</button>
+				<audio id="cream" src="CREAM.mp3" autostart="false" ></audio>
+				<button class="btn btn-primary" onclick="PlayCREAM()"><img src="money.png" width="40" height="40"><br>money</button>
 				 <script>
-			    function PlayKaChing() {
-		        	var moneysound = document.getElementById("ka-ching");
+			    function PlayCREAM() {
+		        	var moneysound = document.getElementById("cream");
         			moneysound.play();
     			}
     			</script>
