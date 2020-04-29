@@ -380,11 +380,7 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
       }
     } else {
       // window is minimised, open window, bring to front of stack.  
-      if ($("#start-bar-" + id).length = 7) {
-        openScumwebDesktopWindow();
-      } else {
-        openWindow(windowId);
-      }
+      openWindow(windowId);
     }
   });
 
