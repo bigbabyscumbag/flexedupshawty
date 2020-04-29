@@ -1,4 +1,3 @@
-
 function parse_query_string(queryString) {
     var query = {};
     var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
@@ -51,19 +50,19 @@ function get_icon_for_address(address) {
 	// TODO: maintain less fake naming abstraction
 	// base it more on the actual filesystem
 	if(address === "/"){ // currently / is our C:\ analog (or C:\Windows\)
-		return "scumweb";
+		return "internet-explorer";
 	// }else if(address === "/my-computer/"){ // we don't have an actual My Computer location yet, it just opens (C:)
 	// 	return "my-computer";
 	}else if(address === "/my-documents/"){
-		return "scumweb";
+		return "internet-explorer";
 	}else if(address === "/network-neighborhood/"){
-		return "scumweb";
+		return "internet-explorer";
 	}else if(address === "/desktop/"){ // i.e. C:\Windows\Desktop
-		return "scumweb";
+		return "internet-explorer";
 	}else if(address.match(/^\w+:\/\//) || address.match(/\.html?$/)){
-		return "scumweb";
+		return "internet-explorer";
 	}else{
-		return "scumweb";
+		return "internet-explorer";
 	}
 }
 
@@ -184,45 +183,3 @@ function executeFile(file_path){
 		});
 	});
 }
-
-$(function(){
-	var query = parse_query_string(location.search);
-	// try to prevent our (potentially existing) iframe from blocking the iframe we're *inside* from blocking the *window* we're inside from showing up until the page loads 
-	// TODO: do so consistently
-	// wait wouldn't the iframe we're in have loaded by now? or no
-	setTimeout(function(){
-		if(query.address){
-			go_to(query.address);
-		}else{
-			go_to("/");
-		}
-	});
-	$("#address").on("keydown", function(e){
-		if(e.which === 13){
-			go_to($("#address").val());
-		}
-	});
-	$("#go").on("click", function(){
-		go_to($("#address").val());
-	});
-	$("#musBut").on("click", function(){
-		// TODO: show message about why it doesn't work
-		// if it doesn't work - I mean, might as well have it try it!
-		window.open('https://instagram.com/bigbabyscumbag', '_blank');
-	});	
-	// $("#refresh").on("click", function(){
-	// 	go_to(address); // whatever the address was before (i.e. ignore changes to the address since navigation)
-	// });
-	$("#back").on("click", function(){
-		// TODO: show message about why it doesn't work
-		// if it doesn't work - I mean, might as well have it try it!
-		$iframe[0].contentWindow.history.back();
-	});
-	$("#forward").on("click", function(){
-		$iframe[0].contentWindow.history.forward();
-	});
-	$("#up").on("click", function(){
-		// can't use $iframe[0].contentWindow.location (unless page is on the same domain)
-		go_to($("#address").val().replace(/[^\/]*\/?$/, "").replace(/(https?|ftps?|sftp|file):\/\/\/?$/, ""));
-	});
-});

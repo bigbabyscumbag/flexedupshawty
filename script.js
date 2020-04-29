@@ -52,6 +52,20 @@ var openWindow = function(id) {
   
 };
 
+var openScumwebMobileWindow = function(id) {
+  $("#" + id).show();
+  $("#" + id).css('z-index', getTopZIndex() + 1);
+  $("#" + id).css('left', 150);
+  $("#" + id).css('top', 50);
+};
+
+var openScumwebDesktopWindow = function(id) {
+  $("#" + id).show();
+  $("#" + id).css('z-index', getTopZIndex() + 1);
+  $("#" + id).css('left', 600);
+  $("#" + id).css('top', 50);
+};
+
 // var openNewWindow = function(id) {
 //  $("#" + id).show();
 //  $("#" + id).css('z-index', getTopZIndex() + 1);
@@ -129,6 +143,69 @@ var openWindow = function(id) {
   });
   openWindow(id);
 };
+
+var createScumwebMobile = function(id, title, imgUrl, url, width, height) {
+  $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
+  $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
+  var content = '<div class="window ui-widget" id="' + id + '">' +
+    '<div class="window-inner">' +
+    '<div class="window-header"><img class="window-header-icon" src="' + imgUrl + '" />' +
+    '<p>' + title + '</p>' +
+    '</div>' +
+    '<div class="window-content" id="' + id + '-content">' +
+  '<iframe scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+  '</div>' +
+  '</div>' +
+  '</div>';
+  $(".desktop").after(content);
+  $(".window").draggable({
+    handle: ".window-header",
+    cursor: "move",
+    containment: "window",
+    stack: ".window"
+  });
+  //$(".window").resizable({
+  //  handles: "n, e, s, w, ne, se, sw, nw",
+  //  minHeight: 250,
+  //  minWidth: 350
+  //});
+  // Prevent windows from moving on sibling being resized or closed
+  $(".window").css({
+    position: "absolute"
+  });
+  openScumwebMobileWindow(id);
+};
+
+var createScumwebDesktop = function(id, title, imgUrl, url, width, height) {
+  var content = '<div class="window" id="' + id + '">' +
+    '<div class="scumweb-window-inner">' +
+    '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" /> <img class="title-bars" src="./programs/scumweb/bars.png" /><img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' +
+    '</div>' +
+    '<div class="scumweb-window-content" id="' + id + '-content">' +
+  '<iframe scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+  '</div>' +
+  '</div>' +
+  '</div>';
+  $(".desktop").after(content);
+  $(".window").draggable({
+    handle: ".scumweb-window-header",
+    cursor: "move",
+    containment: "window",
+    stack: ".window"
+  });
+  //$(".window").resizable({
+  //  handles: "n, e, s, w, ne, se, sw, nw",
+  //  minHeight: 250,
+  //  minWidth: 350
+  //});
+  // Prevent windows from moving on sibling being resized or closed
+  $(".window").css({
+    position: "absolute"
+  });
+  openScumwebDesktopWindow(id);
+};
+
+
 
 var isWindowMaximised = function(id) {
   var targetId = $("#" + id);
@@ -227,15 +304,15 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     var targetId = $(this).data("launch");
     var title = "scumweb";
     var imgUrl = "./images/icons/internet-explorer-16x16.png";
-    var url = "./programs/scumweb/index.html";
+    var url = "./programs/scumweb-mobile/index.html";
     var width = "100%";
     var height = "400";
     if (!isWindowOpen(targetId)) {
-      createProgram(targetId, title, imgUrl, url, width, height);
+      createScumwebMobile(targetId, title, imgUrl, url, width, height);
       $('#menu').hide();
       $("#startbutton").removeClass("startbutton-on");
     } else {
-      openWindow(targetId);
+      openScumwebMobileWindow(targetId);
       $('#menu').hide();
       $("#startbutton").removeClass("startbutton-on");
       console.log("program already exists... opening window")
@@ -245,14 +322,14 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     var title = "scumweb";
     var imgUrl = "./images/icons/internet-explorer-16x16.png";
     var url = "./programs/scumweb/index.html";
-    var width = "630";
-    var height = "570";
+    var width = "500";
+    var height = "459";
     if (!isWindowOpen(targetId)) {
-      createProgram(targetId, title, imgUrl, url, width, height);
+      createScumwebDesktop(targetId, title, imgUrl, url, width, height);
       $('#menu').hide();
       $("#startbutton").removeClass("startbutton-on");
     } else {
-      openWindow(targetId);
+      openScumwebDesktopWindow(targetId);
       $('#menu').hide();
       $("#startbutton").removeClass("startbutton-on");
       console.log("program already exists... opening window")
@@ -303,7 +380,11 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
       }
     } else {
       // window is minimised, open window, bring to front of stack.  
-      openWindow(windowId);
+      if ($("#start-bar-" + id).length = 7) {
+        openScumwebDesktopWindow();
+      } else {
+        openWindow(windowId);
+      }
     }
   });
 
@@ -365,24 +446,6 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
   });
 
   $("#desktop").on("click", ".launch", function(event) {
-    console.log($(this).data("launch"));
-    var targetId = $(this).data("launch");
-    var title = $(this).data("title");
-    var imgUrl = $(this).data("icon");
-    var url = $(this).data("url");
-    var width = $(this).data("width");
-    var height = $(this).data("height");
-    if (!isWindowOpen(targetId)) {
-      createProgram(targetId, title, imgUrl, url, width, height);
-      $("#startbutton").removeClass("startbutton-on");
-    } else {
-      openWindow(targetId);
-      $("#startbutton").removeClass("startbutton-on");
-      console.log("program already exists... opening window")
-    }
-  });
-
-  $("#scumweb").on("click", ".launch", function(event) {
     console.log($(this).data("launch"));
     var targetId = $(this).data("launch");
     var title = $(this).data("title");
