@@ -1,3 +1,8 @@
+// disable dragging of images
+$("img").mousedown(function(e){
+     e.preventDefault()
+});
+
 function updateClock() {
   var time = new Date();
   var hours = time.getHours();
@@ -50,13 +55,6 @@ var openWindow = function(id) {
       $("#" + id).css('top', 50);      
     }
   
-};
-
-var openScumwebMobileWindow = function(id) {
-  $("#" + id).show();
-  $("#" + id).css('z-index', getTopZIndex() + 1);
-  $("#" + id).css('left', 150);
-  $("#" + id).css('top', 50);
 };
 
 var openScumwebDesktopWindow = function(id) {
@@ -173,7 +171,7 @@ var createScumwebMobile = function(id, title, imgUrl, url, width, height) {
   $(".window").css({
     position: "absolute"
   });
-  openScumwebMobileWindow(id);
+  openWindow(id);
 };
 
 var createScumwebDesktop = function(id, title, imgUrl, url, width, height) {

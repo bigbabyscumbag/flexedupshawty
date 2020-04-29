@@ -1,3 +1,8 @@
+// disable dragging of images
+$("img").mousedown(function(e){
+     e.preventDefault()
+});
+
 function parse_query_string(queryString) {
     var query = {};
     var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
