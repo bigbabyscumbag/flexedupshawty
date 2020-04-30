@@ -147,7 +147,9 @@ $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + ti
 $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
 var content = '<div class="window" id="' + id + '">' +
     '<div class="scumweb-window-inner">' +
-    '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" /> <img class="title-bars" src="./programs/scumweb/bars.png" /><img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' +
+    '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" />' +
+    '<p>' + title + '</p>' +
+    '<img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' +
     '</div>' +
     '<div class="scumweb-window-content" id="' + id + '-content">' +
   '<iframe scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
