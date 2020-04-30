@@ -3,15 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>scumweb</title>
-		<link href="../../layout.css" rel="stylesheet" type="text/css">
-		<link href="../../classic.css" rel="stylesheet" type="text/css">
-		<link href="../../lib/os-gui/layout.css" rel="stylesheet" type="text/css">
-		<link href="../../lib/os-gui/windows-98.css" rel="stylesheet" type="text/css">
 		<link href="bootstrap.css" rel="stylesheet" type="text/css">
-
 		<link rel="icon" href="../../images/icons/scumweb-16x16.png" sizes="16x16" type="image/png">
 		<link rel="icon" href="../../images/icons/scumweb-32x32.png" sizes="32x32" type="image/png">
-		<meta name="viewport" content="width=device-width, user-scalable=no">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
@@ -19,17 +13,17 @@
 		<script src="explorer.js"></script>
 		<script  src="../../script.js"></script>
 		<link href="explorer.css" rel="stylesheet" type="text/css">
-		<link href="style.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
+		<span class="border">
 <!--		<div class="toolbar windows-explorer-toolbar"> -->
 			<div id="toolbar-buttons">
 				<!-- MUSIC BUTTON -->
-				<button id="spotify" class="btn btn-primary" type="button"><img src="music.png" width="40" height="40"><br>music</button>
+				<button class="btn btn-primary" type="button" onclick="openSpotify()"><img src="music.png" width="30" height="30"><br>music</button>
 
 				<!-- ONLY FANS BUTTON -->
 				<audio id="onlyfans-oh-yeah" src="onlyfans-oh-yeah.mp3" autostart="false" ></audio>
-				<button class="btn btn-primary" onclick="PlayOhYeah()"><img src="onlyfans.png" width="40" height="40"><br>only fans</button>
+				<button class="btn btn-primary" onclick="PlayOhYeah()"><img src="onlyfans.png" width="30" height="30"><br>only fans</button>
 			    <script>
 			    function PlayOhYeah() {
 		        	var onlyfanssound = document.getElementById("onlyfans-oh-yeah");
@@ -38,7 +32,7 @@
     			</script>
     			<!-- MEMES BUTTON -->
     			<audio id="rickroll" src="memes-troll.mp3" autostart="false" ></audio>
-				<button class="btn btn-primary" onclick="PlayRickRoll()"><img src="memes.png" width="40" height="40"><br>memes</button>
+				<button class="btn btn-primary" onclick="PlayRickRoll()"><img src="memes.png" width="30" height="30"><br>memes</button>
 			    <script>
 			    function PlayRickRoll() {
 		        	var memessound = document.getElementById("rickroll");
@@ -47,17 +41,17 @@
     			</script>
 				<!-- MONEY BUTTON -->
 				<audio id="cream" src="CREAM.mp3" autostart="false" ></audio>
-				<button class="btn btn-primary" onclick="PlayCREAM()"><img src="money.png" width="40" height="40"><br>money</button>
+				<button class="btn btn-primary" onclick="PlayCREAM()"><img src="money.png" width="30" height="30"><br>money</button>
 				 <script>
 			    function PlayCREAM() {
 		        	var moneysound = document.getElementById("cream");
         			moneysound.play();
     			}
     			</script>
-
+<br>
 				<!-- ANIME BUTTON -->
 				<audio id="anime-wow" src="anime-wow.mp3" autostart="false" ></audio>
-				<button class="btn btn-primary anime" onclick="PlayWow()"><img src="anime.png" width="40" height="40"><br>anime</button>
+				<button class="btn btn-primary anime" onclick="PlayWow()"><img src="anime.png" width="30" height="30"><br>anime</button>
 				<script>
 			    function PlayWow() {
 		        	var animesound = document.getElementById("anime-wow");
@@ -67,7 +61,7 @@
 
 				<!-- BEER BUTTON -->
 				<audio id="beer-pour" src="beer-pour.mp3" autostart="false" ></audio>
-				<button class="btn btn-primary" onclick="PlayBeerPour()" data-toggle="modal" data-target="#beermodal"><img src="beer.png" width="40" height="40"><br>beer</button>
+				<button class="btn btn-primary" onclick="PlayBeerPour()" data-toggle="modal" data-target="#beermodal"><img src="beer.png" width="30" height="30"><br>beer</button>
 				<script>
 			    function PlayBeerPour() {
 		        	var beersound = document.getElementById("beer-pour");
@@ -90,8 +84,8 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                <!--    <button type="button" class="btn" data-dismiss="modal" aria-label="Close"> 
+                        <span aria-hidden="true">&times;</span>-->
                     </button>
                 </div>
                 <div class="modal-body">
@@ -134,7 +128,7 @@
 			<button class="lightweight" disabled id="print">Print</button>
 		</div> -->
 		<div id="content"></div>
-			<img src="content.png" class="responsive-image" width="100%" height="100%">
-
+			<img src="finalcover.png" class="responsive-image">
+</span>
 	</body>
 </html>

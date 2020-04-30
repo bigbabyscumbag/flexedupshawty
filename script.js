@@ -46,7 +46,7 @@ var openWindow = function(id) {
   if (isMobile) {
       $("#" + id).show();
       $("#" + id).css('z-index', getTopZIndex() + 1);
-      $("#" + id).css('left', 150);
+      $("#" + id).css('left', 95);
       $("#" + id).css('top', 50);
     } else {
       $("#" + id).show();
@@ -143,8 +143,6 @@ var openScumwebDesktopWindow = function(id) {
 };
 
 var createScumwebMobile = function(id, title, imgUrl, url, width, height) {
-$("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
-$("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
 var content = '<div class="window" id="' + id + '">' +
     '<div class="scumweb-window-inner">' +
     '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" />' +
@@ -172,12 +170,10 @@ var content = '<div class="window" id="' + id + '">' +
   $(".window").css({
     position: "absolute"
   });
-  openScumwebDesktopWindow(id);
+  openWindow(id);
 };
 
 var createScumwebDesktop = function(id, title, imgUrl, url, width, height) {
-$("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
-$("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
 var content = '<div class="window" id="' + id + '">' +
     '<div class="scumweb-window-inner">' +
     '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" /> <img class="title-bars" src="./programs/scumweb/bars.png" /><img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' +
@@ -306,7 +302,7 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     var title = "scumweb";
     var imgUrl = "./images/icons/internet-explorer-16x16.png";
     var url = "./programs/scumweb-mobile/index.html";
-    var width = "100%";
+    var width = "400";
     var height = "400";
     if (!isWindowOpen(targetId)) {
       createScumwebMobile(targetId, title, imgUrl, url, width, height);
