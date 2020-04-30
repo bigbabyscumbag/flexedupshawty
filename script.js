@@ -142,12 +142,43 @@ var openScumwebDesktopWindow = function(id) {
   openWindow(id);
 };
 
+var createScumwebMobile = function(id, title, imgUrl, url, width, height) {
+$("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
+$("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
+var content = '<div class="window" id="' + id + '">' +
+    '<div class="scumweb-window-inner">' +
+    '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" /> <img class="title-bars" src="./programs/scumweb/bars.png" /><img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' +
+    '</div>' +
+    '<div class="scumweb-window-content" id="' + id + '-content">' +
+  '<iframe scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+  '</div>' +
+  '</div>' +
+  '</div>';
+  $(".desktop").after(content);
+  $(".window").draggable({
+    handle: ".scumweb-window-header",
+    cursor: "move",
+    containment: "window",
+    stack: ".window"
+  });
+  //$(".window").resizable({
+  //  handles: "n, e, s, w, ne, se, sw, nw",
+  //  minHeight: 250,
+  //  minWidth: 350
+  //});
+  // Prevent windows from moving on sibling being resized or closed
+  $(".window").css({
+    position: "absolute"
+  });
+  openScumwebDesktopWindow(id);
+};
+
 var createScumwebDesktop = function(id, title, imgUrl, url, width, height) {
 $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
 $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
 var content = '<div class="window" id="' + id + '">' +
     '<div class="scumweb-window-inner">' +
-    '<div class="movecursor"><div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" /> <img class="title-bars" src="./programs/scumweb/bars.png" /><img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" /></div>' +
+    '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" /> <img class="title-bars" src="./programs/scumweb/bars.png" /><img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' +
     '</div>' +
     '<div class="scumweb-window-content" id="' + id + '-content">' +
   '<iframe scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
@@ -269,7 +300,7 @@ $(document).ready(function() {
 //this creates a *new* program window for scumweb on page load instead of opening the already existing scumweb program window. find fix.
 let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
   if (isMobile) {
-    var targetId = $(this).data("launch");
+    var targetId = "scumweb";
     var title = "scumweb";
     var imgUrl = "./images/icons/internet-explorer-16x16.png";
     var url = "./programs/scumweb-mobile/index.html";
@@ -286,7 +317,7 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
       console.log("program already exists... opening window")
     };
     } else {
-    var targetId = $(this).data("launch");
+    var targetId = "scumweb";
     var title = "scumweb";
     var imgUrl = "./images/icons/internet-explorer-16x16.png";
     var url = "./programs/scumweb/index.html";

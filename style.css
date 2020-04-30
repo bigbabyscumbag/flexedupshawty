@@ -400,13 +400,6 @@ html, body {
   background-repeat: no-repeat;
   }
 
-  .close-scumweb {
-  background-image: url("https://res.cloudinary.com/penry/image/upload/q_100/v1475278244/close_jw5cay.png");
-  background-size: auto 100%;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  }
-
 .maximise {
   background-image: url("https://res.cloudinary.com/penry/image/upload/q_100/v1475278244/maximise_anhbyl.png");
   background-size: auto 100%;
