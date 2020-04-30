@@ -100,6 +100,10 @@ var openWindow = function(id) {
 //  openWindow(id);
 //};
 
+// maximise and minimise buttons removed from below:
+//    ' <div class="window-icon maximise" ></div>' +
+//    ' <div class="window-icon minimise" ></div>' +
+
   var createProgram = function(id, title, imgUrl, url, width, height) {
   $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
   $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
@@ -108,8 +112,6 @@ var openWindow = function(id) {
     '<div class="window-header"><img class="window-header-icon" src="' + imgUrl + '" />' +
     '<p>' + title + '</p>' +
     ' <div class="window-icon close" ></div>' +
-    ' <div class="window-icon maximise" ></div>' +
-    ' <div class="window-icon minimise" ></div>' +
     '</div>' +
     '<div class="window-content" id="' + id + '-content">' +
     '<iframe scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
