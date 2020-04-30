@@ -46,7 +46,7 @@ var openWindow = function(id) {
   if (isMobile) {
       $("#" + id).show();
       $("#" + id).css('z-index', getTopZIndex() + 1);
-      $("#" + id).css('left', 95);
+      $("#" + id).css('left', 80);
       $("#" + id).css('top', 50);
     } else {
       $("#" + id).show();
@@ -295,7 +295,7 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     var title = "scumweb";
     var imgUrl = "./images/icons/internet-explorer-16x16.png";
     var url = "./programs/scumweb-mobile/index.html";
-    var width = "400";
+    var width = "410";
     var height = "400";
     if (!isWindowOpen(targetId)) {
       createScumwebMobile(targetId, title, imgUrl, url, width, height);
