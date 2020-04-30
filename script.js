@@ -57,13 +57,6 @@ var openWindow = function(id) {
   
 };
 
-var openScumwebDesktopWindow = function(id) {
-  $("#" + id).show();
-  $("#" + id).css('z-index', getTopZIndex() + 1);
-  $("#" + id).css('left', 600);
-  $("#" + id).css('top', 50);
-};
-
 // var openNewWindow = function(id) {
 //  $("#" + id).show();
 //  $("#" + id).css('z-index', getTopZIndex() + 1);
@@ -199,7 +192,7 @@ var content = '<div class="window" id="' + id + '">' +
   $(".window").css({
     position: "absolute"
   });
-  openScumwebDesktopWindow(id);
+  openWindow(id);
 };
 
 

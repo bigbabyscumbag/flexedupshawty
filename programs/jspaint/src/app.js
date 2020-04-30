@@ -2,8 +2,8 @@
 const default_magnification = 1;
 const default_tool = get_tool_by_name("Pencil");
 
-const default_canvas_width = 683;
-const default_canvas_height = 384;
+const default_canvas_width = 320;
+const default_canvas_height = 305;
 let my_canvas_width = default_canvas_width;
 let my_canvas_height = default_canvas_height;
 
@@ -116,34 +116,6 @@ const $top = $(E("div")).addClass("component-area").prependTo($V);
 const $bottom = $(E("div")).addClass("component-area").appendTo($V);
 const $left = $(E("div")).addClass("component-area").prependTo($H);
 const $right = $(E("div")).addClass("component-area").appendTo($H);
-
-const $status_area = $(E("div")).addClass("status-area").appendTo($V);
-const $status_text = $(E("div")).addClass("status-text").appendTo($status_area);
-const $status_position = $(E("div")).addClass("status-coordinates").appendTo($status_area);
-const $status_size = $(E("div")).addClass("status-coordinates").appendTo($status_area);
-
-const $news_indicator = $(`
-	<a class='news-indicator' href='#project-news'>
-		<img src='images/winter/present.png' width='24' height='22' alt=''/>
-		<span class='not-the-icon'>
-			<strong>New!</strong>&nbsp;Holiday theme, multitouch panning, and revamped history
-		</span>
-	</a>
-`);
-$news_indicator.on("click auxclick", (event)=> {
-	event.preventDefault();
-	show_news();
-});
-// TODO: use localstorage to show until clicked, if available
-// and show for a longer period of time after the update, if available
-if (Date.now() < Date.parse("Jan 5 2020 23:42:42 GMT-0500")) {
-	$status_area.append($news_indicator);
-}
-
-$status_text.default = () => {
-	$status_text.text("For Help, click Help Topics on the Help Menu.");
-};
-$status_text.default();
 
 // menu bar
 let menu_bar_outside_frame = false;
