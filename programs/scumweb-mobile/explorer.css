@@ -16,8 +16,6 @@ cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQA
 
  #toolbar-buttons {
 	margin-top: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
 	font-family: "Krungthep";
 	display: flex;
 }
