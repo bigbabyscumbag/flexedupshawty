@@ -53,6 +53,7 @@ cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQA
 	border: inset 1px gray; /* not particularly accurate */
 	padding-top: 2px;
 	padding-bottom: 2px;
+	padding-left: 2px;
 }
 
 #location {
