@@ -114,7 +114,7 @@ var openWindow = function(id) {
     ' <div class="window-icon close" ></div>' +
     '</div>' +
     '<div class="window-content" id="' + id + '-content">' +
-    '<iframe scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+    '<iframe id="frame" scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
   '</div>' +
   '</div>' +
   '</div>';
@@ -147,7 +147,7 @@ var content = '<div class="window" id="' + id + '">' +
     '<img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' +
     '</div>' +
     '<div class="scumweb-window-content" id="' + id + '-content">' +
-  '<iframe scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+  '<iframe id="frame" scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
   '</div>' +
   '</div>' +
   '</div>';
@@ -178,7 +178,7 @@ var content = '<div class="window" id="' + id + '">' +
     '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" /> <img class="title-bars" src="./programs/scumweb/bars.png" /><img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' +
     '</div>' +
     '<div class="scumweb-window-content" id="' + id + '-content">' +
-  '<iframe scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+  '<iframe id="frame" scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
   '</div>' +
   '</div>' +
   '</div>';
@@ -291,15 +291,15 @@ $(document).ready(function() {
 
   setInterval(updateClock(), 1000);
   //start up music
-  var audio = new Audio('http://www.winhistory.de/more/winstart/ogg/win98.ogg');
-  audio.play();
+//  var audio = new Audio('http://www.winhistory.de/more/winstart/ogg/win98.ogg');
+//  audio.play();
 
 //this creates a *new* program window for scumweb on page load instead of opening the already existing scumweb program window. find fix.
 let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
   if (isMobile) {
     var targetId = "scumweb";
     var title = "scumweb";
-    var imgUrl = "./images/icons/internet-explorer-16x16.png";
+    var imgUrl = "./images/icons/scumweb-16x16.png";
     var url = "./programs/scumweb-mobile/index.html";
     var width = "410";
     var height = "400";
@@ -316,7 +316,7 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     } else {
     var targetId = "scumweb";
     var title = "scumweb";
-    var imgUrl = "./images/icons/internet-explorer-16x16.png";
+    var imgUrl = "./images/icons/scumweb-16x16.png";
     var url = "./programs/scumweb/index.html";
     var width = "500";
     var height = "459";

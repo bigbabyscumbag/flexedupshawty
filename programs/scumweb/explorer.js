@@ -3,6 +3,12 @@ $("img").mousedown(function(e){
      e.preventDefault()
 });
 
+// https://stackoverflow.com/questions/25962958/calling-a-javascript-function-in-another-js-file
+//import { f1 } from "./file1.js";
+//f1();
+
+
+
 function parse_query_string(queryString) {
     var query = {};
     var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');

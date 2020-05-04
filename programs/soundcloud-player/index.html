@@ -3,24 +3,17 @@
 	<head>
 		<meta charset="utf-8">
 		<title>SoundCloud Player</title>
-		<link href="../../layout.css" rel="stylesheet" type="text/css">
-		<link href="../../classic.css" rel="stylesheet" type="text/css">
-		<link href="../../lib/os-gui/layout.css" rel="stylesheet" type="text/css">
-		<link href="../../lib/os-gui/windows-98.css" rel="stylesheet" type="text/css">
-		<link rel="icon" href="../../images/icons/spotify-16x16.png" sizes="16x16" type="image/png">
-		<link rel="icon" href="../../images/icons/spotify-32x32.png" sizes="32x32" type="image/png">
+		<link rel="icon" href="../../images/icons/soundcloud-16x16.png" sizes="16x16" type="image/png">
+		<link rel="icon" href="../../images/icons/soundcloud-32x32.png" sizes="32x32" type="image/png">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
-		<script src="../../lib/jquery.min.js"></script>
-		<script src="../../lib/pep.js"></script>
-		<script src="../../lib/browserfs.js"></script>
-		<script src="../../src/filesystem-setup.js"></script>
-		<!-- <script src="../../lib/os-gui/$MenuBar.js"></script> -->
-		<script src="../../src/helpers.js"></script>
-		<script src="../../src/$FolderView.js"></script>
-		<script src="../../src/$FolderViewIcon.js"></script>
-		<script src="menus.js"></script>
-		<script src="explorer.js"></script>
-		<link href="explorer.css" rel="stylesheet" type="text/css">
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: #bdbdbd;
+				margin: auto;
+			}
+		</style>
 	</head>
 	<body>
 		<!-- <div class="toolbar ie-toolbar">
@@ -36,7 +29,7 @@
 			<button class="lightweight" disabled id="print">Print</button>
 		</div> -->
 		<div id="content">
-			<iframe width="300" height="400" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/942539149&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+			<iframe width="300" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/942539149&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 		</div>
 		<!-- TODO: status bar including thing that says "Internet" or "My Computer" -->
 

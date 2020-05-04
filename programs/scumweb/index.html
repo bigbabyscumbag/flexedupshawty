@@ -61,12 +61,24 @@
 
 				<!-- BEER BUTTON -->
 				<audio id="beer-pour" src="beer-pour.mp3" autostart="false" ></audio>
-				<button class="btn btn-primary" onclick="PlayBeerPour()" data-toggle="modal" data-target="#beermodal"><img src="beer.png" width="30" height="30"><br>beer</button>
+			<!--<button class="btn btn-primary" onclick="PlayBeerPour()" data-toggle="modal" data-target="#beermodal"><img src="beer.png" width="30" height="30"><br>beer</button> -->
+				<button class="btn btn-primary" onclick="PlayBeerPour()"><img src="beer.png" width="30" height="30"><br>beer</button>
 				<script>
 			    function PlayBeerPour() {
 		        	var beersound = document.getElementById("beer-pour");
         			beersound.play();
+        			
+        			document.getElementById("photo").src = "1.png";
+        			setTimeout(changeIMGback, 8500);
+
+        			var element = document.getElementById("address");
+					element.innerHTML = "/Photos/SILLY_RABBIT_BEER_001.jpg";
     			}
+    			function changeIMGback() {
+    				document.getElementById("photo").src = "finalcover-retro.png";
+    				var element = document.getElementById("address");
+					element.innerHTML = "www.flexedupshawty.com";
+				}
     			</script>
 				
 			<!--	<img src="/images/bbslogomini.png" width="40" height="49"> -->
@@ -78,14 +90,12 @@
 			</div>
 <!--	</div> -->
 
-    <!-- Beer Modal -->
+    <!-- Beer Modal
 
 <div class="modal fade" id="beermodal" tabindex="-1" role="dialog" aria-labelledby="Beer" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <!--    <button type="button" class="btn" data-dismiss="modal" aria-label="Close"> 
-                        <span aria-hidden="true">&times;</span>-->
                     </button>
                 </div>
                 <div class="modal-body">
@@ -98,7 +108,7 @@
         </div>
     </div> 
 
-    <!-- End Beer modal -->
+ End Beer modal -->
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -111,7 +121,7 @@
 			<div id="location">location:</div>
 			<!-- TODO: compound input with an icon representing the resource, and a dropdown -->
 			<div id="address">
-				<div>www.flexedupshawty.com</div>
+				www.flexedupshawty.com
 			</div>
 			
 		</div>
@@ -128,7 +138,7 @@
 			<button class="lightweight" disabled id="print">Print</button>
 		</div> -->
 		<div id="content"></div>
-			<img src="finalcover-retro.png" class="responsive-image">
+			<img id="photo" src="finalcover-retro.png" class="responsive-image">
 </span>
 	</body>
 </html>

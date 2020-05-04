@@ -3,43 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Spotify Player</title>
-		<link href="../../layout.css" rel="stylesheet" type="text/css">
-		<link href="../../classic.css" rel="stylesheet" type="text/css">
-		<link href="../../lib/os-gui/layout.css" rel="stylesheet" type="text/css">
-		<link href="../../lib/os-gui/windows-98.css" rel="stylesheet" type="text/css">
 		<link rel="icon" href="../../images/icons/spotify-16x16.png" sizes="16x16" type="image/png">
 		<link rel="icon" href="../../images/icons/spotify-32x32.png" sizes="32x32" type="image/png">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
-		<script src="../../lib/jquery.min.js"></script>
-		<script src="../../lib/pep.js"></script>
-		<script src="../../lib/browserfs.js"></script>
-		<script src="../../src/filesystem-setup.js"></script>
-		<!-- <script src="../../lib/os-gui/$MenuBar.js"></script> -->
-		<script src="../../src/helpers.js"></script>
-		<script src="../../src/$FolderView.js"></script>
-		<script src="../../src/$FolderViewIcon.js"></script>
-		<script src="menus.js"></script>
-		<script src="explorer.js"></script>
-		<link href="explorer.css" rel="stylesheet" type="text/css">
+				<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: #bdbdbd;
+				margin: auto;
+			}
+		</style>
 	</head>
 	<body>
-		<!-- <div class="toolbar ie-toolbar">
-			<button class="lightweight" disabled id="back">Back</button>
-			<button class="lightweight" disabled id="forward">Forward</button>
-			<button class="lightweight" disabled id="stop">Stop</button>
-			<button class="lightweight" disabled id="refresh">Refresh</button>
-			<button class="lightweight" disabled id="home">Home</button>
-			<button class="lightweight" disabled id="search">Search</button>
-			<button class="lightweight" disabled id="favorites">Favorites</button>
-			<button class="lightweight" disabled id="history">History</button>
-			<button class="lightweight" disabled id="mail">Mail<button class="lightweight" disabled id="mail-menu-button">&#x25BE;</button></button>
-			<button class="lightweight" disabled id="print">Print</button>
-		</div> -->
 		<div id="content">
-			<iframe src="https://open.spotify.com/embed/album/4QePRH0Day9loIACOepxOX" width="300" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			<iframe src="https://open.spotify.com/embed/album/4QePRH0Day9loIACOepxOX" width="300" height="400" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 		</div>
-		<!-- TODO: status bar including thing that says "Internet" or "My Computer" -->
-
 
 	</body>
 </html>
