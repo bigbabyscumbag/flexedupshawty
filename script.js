@@ -290,9 +290,10 @@ var setIcon = function() {
 $(document).ready(function() {
 
   setInterval(updateClock(), 1000);
+  
   //start up music
-//  var audio = new Audio('http://www.winhistory.de/more/winstart/ogg/win98.ogg');
-//  audio.play();
+  var audio = new Audio('http://www.winhistory.de/more/winstart/ogg/win98.ogg');
+  audio.play();
 
 //this creates a *new* program window for scumweb on page load instead of opening the already existing scumweb program window. find fix.
 let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
