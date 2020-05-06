@@ -13,12 +13,17 @@
 				background-color: #bdbdbd;
 				margin: auto;
 			}
+			.container {
+				display: grid;
+			}
+			.content, .overlay {
+				grid-area: 1 / 1;
+			}
 		</style>
 	</head>
 	<body>
-		<div id="content">
-			<iframe src="https://open.spotify.com/embed/album/4QePRH0Day9loIACOepxOX" width="300" height="400" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-		</div>
-
+		<iframe style="width: 300px; height: 400px; display: block; position: absolute;" src="https://open.spotify.com/embed/album/4QePRH0Day9loIACOepxOX" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+		
+		<iframe style="width: 200px; height: 40px; top: 365px; left: 100px;    display: block; position: absolute;" src="spotify-follow-button.html" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
 	</body>
 </html>
