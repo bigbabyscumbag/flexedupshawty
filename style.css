@@ -378,7 +378,6 @@ body {
   display: block;
   margin-left: 5px;
   height: 29px;
-  width: 230px;
   text-align: left;
   padding: 4px;
   padding-left: 30px;
@@ -394,6 +393,21 @@ body {
   background-position: 3px 50%;
   background-repeat: no-repeat;
 }
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+  .program {
+    width: 230px;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  .program {
+    width: 200px;
+  }
+}
+
 .window-header-icon {
   height: 20px;
   margin-left: 3px;
