@@ -3,6 +3,17 @@ $("img").mousedown(function(e){
      e.preventDefault()
 });
 
+function closeAlert() {
+  var x = document.getElementById("alertbox");
+  x.style.display = "none";
+}
+
+function okButton() {
+  var x = document.getElementById("alertbox");
+  x.style.display = "none";
+  window.open('https://www.smarturl.it', '_blank');
+}
+
 function updateClock() {
   var time = new Date();
   var hours = time.getHours();
@@ -52,6 +63,22 @@ var openWindow = function(id) {
       $("#" + id).show();
       $("#" + id).css('z-index', getTopZIndex() + 1);
       $("#" + id).css('left', 200);
+      $("#" + id).css('top', 50);      
+    }
+  
+};
+
+var openScumwebWindow = function(id) {
+  let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  if (isMobile) {
+      $("#" + id).show();
+      $("#" + id).css('z-index', getTopZIndex() + 1);
+      $("#" + id).css('left', 80);
+      $("#" + id).css('top', 50);
+    } else {
+      $("#" + id).show();
+      $("#" + id).css('z-index', getTopZIndex() + 1);
+      $("#" + id).css('left', 450);
       $("#" + id).css('top', 50);      
     }
   
@@ -167,7 +194,7 @@ var content = '<div class="window" id="' + id + '">' +
   $(".window").css({
     position: "absolute"
   });
-  openWindow(id);
+  openScumwebWindow(id);
 };
 
 var createScumwebDesktop = function(id, title, imgUrl, url, width, height) {
@@ -198,10 +225,8 @@ var content = '<div class="window" id="' + id + '">' +
   $(".window").css({
     position: "absolute"
   });
-  openWindow(id);
+  openScumwebWindow(id);
 };
-
-
 
 var isWindowMaximised = function(id) {
   var targetId = $("#" + id);

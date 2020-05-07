@@ -3,6 +3,28 @@ $("img").mousedown(function(e){
      e.preventDefault()
 });
 
+//function openAlert() {
+//  var x = document.getElementById("alertbox");
+//  x.style.display = "block";
+//  $("#alertbox").css('z-index', getTopZIndex() + 1);
+//  $("#alertbox").css('left', 80);
+//  $("#alertbox").css('top', 50);
+//}
+
+//function closeAlert() {
+//  var x = document.getElementById("alertbox");
+//  if (x.style.display === "none") {
+//    x.style.display = "block";
+//  } else {
+//    x.style.display = "none";
+//  }
+//}
+
+//$(document).ready(function() {
+//	// make new alert box
+//  	openAlert();
+//});
+
 // https://stackoverflow.com/questions/25962958/calling-a-javascript-function-in-another-js-file
 //import { f1 } from "./file1.js";
 //f1();
