@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>scumweb</title>
-		<link href="bootstrap.css" rel="stylesheet" type="text/css">
-		<link rel="icon" href="../../images/icons/scumweb-16x16.png" sizes="16x16" type="image/png">
-		<link rel="icon" href="../../images/icons/scumweb-32x32.png" sizes="32x32" type="image/png">
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" type="text/css" />
-		<link href="explorer.css" rel="stylesheet" type="text/css">
-		<link href="win98.css" rel="stylesheet" type="text/css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
-		<script src="../../lib/jquery.min.js"></script>
-		<script  src="../../script.js"></script>
-		<script src="explorer.js"></script>
-	</head>
-	<body>
-		<span class="border">
+
+<head>
+	<meta charset="utf-8">
+	<title>scumweb</title>
+	<link href="bootstrap.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="../../images/icons/scumweb-16x16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="../../images/icons/scumweb-32x32.png" sizes="32x32" type="image/png">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" type="text/css" />
+	<link href="explorer.css" rel="stylesheet" type="text/css">
+	<link href="win98.css" rel="stylesheet" type="text/css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="../../lib/jquery.min.js"></script>
+	<script src="../../script.js"></script>
+</head>
+
+<body>
+	<script>
+		// disable dragging of images
+		$("img").mousedown(function(e){
+		     e.preventDefault()
+		});
+	</script>
+	<span class="border">
 			<div id="toolbar-buttons">
 				<!-- MUSIC BUTTON -->
 				<button class="btn btn-primary" type="button" onclick="window.open('https://open.spotify.com/artist/3WjxW7xt0RCSotYoQBzEXB?si=oBDqQiL_S_qTjmSfSRF4cg', '_blank');"><img src="music.png" width="30" height="30"><br>music</button>
