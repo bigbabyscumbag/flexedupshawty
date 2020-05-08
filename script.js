@@ -1,1 +1,443 @@
-var _0x2241=['#menu','.startbar','alertbox','background-image','window\x20does\x20not\x20exist','z-index','no\x20icon\x20supplied','#desktop','startbutton-on','preventDefault','each','maximising\x20window','</p>','window\x20open','matchMedia','#startbutton','url(','top','data','window\x20width\x20','<div\x20class=\x22window-content\x22\x20id=\x22','459','<div\x20class=\x22window-header\x22><img\x20class=\x22window-header-icon\x22\x20src=\x22','#start-bar-','window','matches','draggable','url','show','getElementById','\x20is\x20at\x20top\x20of\x20stack','\x22\x20frameborder=\x220\x22\x20allowfullscreen></iframe>','hide','./programs/scumweb-mobile/index.html','error','.time','./images/icons/scumweb-16x16.png','<iframe\x20id=\x22frame\x22\x20scrolling=\x22no\x22\x20width=\x22','style','<div\x20class=\x22window\x22\x20id=\x22','.window-header','ready','icon','toggleClass','410','400','desktop\x20width\x20','log','else\x20condition\x20fired\x20pepe\x20show','<div\x20class=\x22scumweb-window-header\x22><img\x20class=\x22scumweb-window-header-top-left-button\x22\x20src=\x22./programs/scumweb/window_header_top_left_button.png\x22\x20/>','program\x20already\x20exists...\x20opening\x20window','move','\x22\x20src=\x22','.window','<span\x20class=\x27program\x27\x20id=\x27start-bar-','none','height','\x27\x20>','</div>','removeClass','.desktop','<div\x20class=\x22scumweb-window-inner\x22>','play','body','length','<p>','<img\x20class=\x22scumweb-window-header-top-right-button-right\x22\x20src=\x22./programs/scumweb/window_header_top_right_button_right.png\x22\x20/><img\x20class=\x22scumweb-window-header-top-right-button-left\x22\x20src=\x22./programs/scumweb/window_header_top_right_button_left.png\x22\x20/>','only\x20screen\x20and\x20(max-width:\x20760px)','width','getMinutes','attr','unmaximise\x20window','getHours','<div\x20class=\x22scumweb-window-content\x22\x20id=\x22','img','.launch','css','mousedown','<div\x20class=\x22scumweb-window-header\x22><img\x20class=\x22scumweb-window-header-top-left-button\x22\x20src=\x22./programs/scumweb/window_header_top_left_button.png\x22\x20/>\x20<img\x20class=\x22title-bars\x22\x20src=\x22./programs/scumweb/bars.png\x22\x20/><img\x20class=\x22scumweb-window-header-top-right-button-right\x22\x20src=\x22./programs/scumweb/window_header_top_right_button_right.png\x22\x20/><img\x20class=\x22scumweb-window-header-top-right-button-left\x22\x20src=\x22./programs/scumweb/window_header_top_right_button_left.png\x22\x20/>','launch','focused','remove','substring','-content\x22>','toggle','<div\x20class=\x22window\x20ui-widget\x22\x20id=\x22','click','#start-bar','.maximise','\x22\x20height=\x22','\x22\x20/>','.minimise','outerWidth','.program','./programs/scumweb/index.html','absolute','.scumweb-window-header','\x20<div\x20class=\x22window-icon\x20close\x22\x20></div>','html','title','.item','</span>','display','parent','<div\x20class=\x22window-inner\x22>','left','scumweb','after','http://www.winhistory.de/more/winstart/ogg/win98.ogg','open'];(function(_0x216da2,_0x224109){var _0x1d9639=function(_0x1266ce){while(--_0x1266ce){_0x216da2['push'](_0x216da2['shift']());}};_0x1d9639(++_0x224109);}(_0x2241,0xf0));var _0x1d96=function(_0x216da2,_0x224109){_0x216da2=_0x216da2-0x0;var _0x1d9639=_0x2241[_0x216da2];return _0x1d9639;};$(_0x1d96('0x36'))[_0x1d96('0x39')](function(_0x2bd0fe){_0x2bd0fe[_0x1d96('0x63')]();});function closeAlert(){var _0x21628c=document[_0x1d96('0x9')](_0x1d96('0x5c'));_0x21628c[_0x1d96('0x12')][_0x1d96('0x52')]=_0x1d96('0x23');}function okButton(){var _0x2736de=document[_0x1d96('0x9')](_0x1d96('0x5c'));_0x2736de[_0x1d96('0x12')][_0x1d96('0x52')]=_0x1d96('0x23');window[_0x1d96('0x59')]('https://www.smarturl.it','_blank');}function updateClock(){var _0xf4ba62=new Date();var _0x2a6603=_0xf4ba62[_0x1d96('0x34')]();var _0x4514ac=_0xf4ba62[_0x1d96('0x31')]();var _0x75ddab='AM';if(_0x4514ac<0xa){_0x4514ac='0'+_0x4514ac;}if(_0x2a6603===0x0){_0x2a6603='12';}else if(_0x2a6603===0xc){_0x75ddab='PM';}else if(_0x2a6603>0xc){_0x2a6603=_0x2a6603%0xc;_0x75ddab='PM';}var _0x555396=_0x2a6603+':'+_0x4514ac+'\x20'+_0x75ddab;$(_0x1d96('0xf'))[_0x1d96('0x4e')](_0x555396);}var getTopZIndex=function(){var _0x48611c=$('.window');var _0x2f96f2=0x0;var _0x1edaeb;_0x48611c[_0x1d96('0x64')](function(){var _0x46aa8d=parseInt($(this)['css'](_0x1d96('0x5f')));if(_0x46aa8d>_0x2f96f2){_0x2f96f2=_0x46aa8d;_0x1edaeb=this['id'];}});return _0x2f96f2;};var openWindow=function(_0x4f0ba4){let _0x3b3389=window[_0x1d96('0x68')](_0x1d96('0x2f'))[_0x1d96('0x5')];if(_0x3b3389){$('#'+_0x4f0ba4)['show']();$('#'+_0x4f0ba4)['css'](_0x1d96('0x5f'),getTopZIndex()+0x1);$('#'+_0x4f0ba4)[_0x1d96('0x38')](_0x1d96('0x55'),0x50);$('#'+_0x4f0ba4)[_0x1d96('0x38')](_0x1d96('0x6b'),0x32);}else{$('#'+_0x4f0ba4)[_0x1d96('0x8')]();$('#'+_0x4f0ba4)[_0x1d96('0x38')](_0x1d96('0x5f'),getTopZIndex()+0x1);$('#'+_0x4f0ba4)[_0x1d96('0x38')](_0x1d96('0x55'),0xc8);$('#'+_0x4f0ba4)[_0x1d96('0x38')](_0x1d96('0x6b'),0x32);}};var openScumwebWindow=function(_0x297d10){let _0x2389aa=window['matchMedia'](_0x1d96('0x2f'))[_0x1d96('0x5')];if(_0x2389aa){$('#'+_0x297d10)['show']();$('#'+_0x297d10)[_0x1d96('0x38')](_0x1d96('0x5f'),getTopZIndex()+0x1);$('#'+_0x297d10)['css'](_0x1d96('0x55'),0x50);$('#'+_0x297d10)[_0x1d96('0x38')](_0x1d96('0x6b'),0x32);}else{$('#'+_0x297d10)[_0x1d96('0x8')]();$('#'+_0x297d10)['css'](_0x1d96('0x5f'),getTopZIndex()+0x1);$('#'+_0x297d10)[_0x1d96('0x38')]('left',0x1c2);$('#'+_0x297d10)[_0x1d96('0x38')](_0x1d96('0x6b'),0x32);}};var createProgram=function(_0x182e08,_0x1c5b1e,_0x48f27e,_0x41819f,_0x4101a2,_0xd8a995){$(_0x1d96('0x69'))[_0x1d96('0x57')](_0x1d96('0x22')+_0x182e08+_0x1d96('0x25')+_0x1c5b1e+_0x1d96('0x51'));$('#start-bar-'+_0x182e08)[_0x1d96('0x38')](_0x1d96('0x5d'),'url('+_0x48f27e+')');var _0x14d828=_0x1d96('0x41')+_0x182e08+'\x22>'+_0x1d96('0x54')+_0x1d96('0x2')+_0x48f27e+_0x1d96('0x46')+_0x1d96('0x2d')+_0x1c5b1e+_0x1d96('0x66')+_0x1d96('0x4d')+'</div>'+_0x1d96('0x0')+_0x182e08+_0x1d96('0x3f')+'<iframe\x20id=\x22frame\x22\x20scrolling=\x22no\x22\x20width=\x22'+_0x4101a2+_0x1d96('0x45')+_0xd8a995+_0x1d96('0x20')+_0x41819f+'\x22\x20frameborder=\x220\x22\x20allowfullscreen></iframe>';_0x1d96('0x26')+_0x1d96('0x26')+'</div>';$(_0x1d96('0x28'))[_0x1d96('0x57')](_0x14d828);$(_0x1d96('0x21'))[_0x1d96('0x6')]({'handle':_0x1d96('0x14'),'cursor':_0x1d96('0x1f'),'containment':_0x1d96('0x4'),'stack':_0x1d96('0x21')});$('.window')[_0x1d96('0x38')]({'position':_0x1d96('0x4b')});openWindow(_0x182e08);};var createScumwebMobile=function(_0x587971,_0x185bfd,_0x144b19,_0x5e1ddb,_0x4b679c,_0x4e1857){$(_0x1d96('0x69'))[_0x1d96('0x57')](_0x1d96('0x22')+_0x587971+_0x1d96('0x25')+_0x185bfd+_0x1d96('0x51'));$(_0x1d96('0x3')+_0x587971)[_0x1d96('0x38')](_0x1d96('0x5d'),_0x1d96('0x6a')+_0x144b19+')');var _0x5d92e3=_0x1d96('0x13')+_0x587971+'\x22>'+_0x1d96('0x29')+_0x1d96('0x1d')+'<p>'+_0x185bfd+_0x1d96('0x66')+_0x1d96('0x2e')+'</div>'+_0x1d96('0x35')+_0x587971+_0x1d96('0x3f')+_0x1d96('0x11')+_0x4b679c+_0x1d96('0x45')+_0x4e1857+_0x1d96('0x20')+_0x5e1ddb+_0x1d96('0xb');_0x1d96('0x26')+_0x1d96('0x26')+_0x1d96('0x26');$(_0x1d96('0x28'))[_0x1d96('0x57')](_0x5d92e3);$(_0x1d96('0x21'))['draggable']({'handle':_0x1d96('0x4c'),'cursor':_0x1d96('0x1f'),'containment':_0x1d96('0x4'),'stack':_0x1d96('0x21')});$(_0x1d96('0x21'))[_0x1d96('0x38')]({'position':_0x1d96('0x4b')});openScumwebWindow(_0x587971);};var createScumwebDesktop=function(_0x4ebd58,_0x2e50c0,_0x504be3,_0x32cad9,_0x431a43,_0xc2f4a9){$(_0x1d96('0x69'))[_0x1d96('0x57')]('<span\x20class=\x27program\x27\x20id=\x27start-bar-'+_0x4ebd58+_0x1d96('0x25')+_0x2e50c0+_0x1d96('0x51'));$(_0x1d96('0x3')+_0x4ebd58)[_0x1d96('0x38')](_0x1d96('0x5d'),_0x1d96('0x6a')+_0x504be3+')');var _0xd6054c=_0x1d96('0x13')+_0x4ebd58+'\x22>'+_0x1d96('0x29')+_0x1d96('0x3a')+_0x1d96('0x26')+_0x1d96('0x35')+_0x4ebd58+_0x1d96('0x3f')+_0x1d96('0x11')+_0x431a43+_0x1d96('0x45')+_0xc2f4a9+_0x1d96('0x20')+_0x32cad9+_0x1d96('0xb');_0x1d96('0x26')+_0x1d96('0x26')+_0x1d96('0x26');$(_0x1d96('0x28'))['after'](_0xd6054c);$('.window')[_0x1d96('0x6')]({'handle':'.scumweb-window-header','cursor':_0x1d96('0x1f'),'containment':_0x1d96('0x4'),'stack':_0x1d96('0x21')});$('.window')[_0x1d96('0x38')]({'position':_0x1d96('0x4b')});openScumwebWindow(_0x4ebd58);};var isWindowMaximised=function(_0x21aa7f){var _0x3a4d3f=$('#'+_0x21aa7f);console[_0x1d96('0x1b')](_0x1d96('0x1a')+$(window)['width']());console[_0x1d96('0x1b')](_0x1d96('0x6d')+_0x3a4d3f['outerWidth']());if(_0x3a4d3f[_0x1d96('0x48')]()<$(window)[_0x1d96('0x30')]()){return![];}else{return!![];}};var isWindowOpen=function(_0x196328){if($(_0x1d96('0x3')+_0x196328)[_0x1d96('0x2c')]>0x0){return!![];console[_0x1d96('0x1b')](_0x1d96('0x67'));}else{return![];console[_0x1d96('0x1b')](_0x1d96('0x5e'));}};var closeProgram=function(_0x1ebdbe){$(_0x1d96('0x3')+_0x1ebdbe)[_0x1d96('0x3d')]();$('#'+_0x1ebdbe)[_0x1d96('0x3d')]();};var minimiseProgram=function(_0x2930b9){$(_0x1d96('0x43')+_0x2930b9)[_0x1d96('0x17')](_0x1d96('0x3c'));};var setIcon=function(){if($(this)[_0x1d96('0x6c')]('icon')){var _0x87f0a=$(this)[_0x1d96('0x6c')](_0x1d96('0x16'));$(this)[_0x1d96('0x38')](_0x1d96('0x5d'),_0x1d96('0x6a')+_0x87f0a+')');}else{console[_0x1d96('0x1b')](_0x1d96('0x60'));}};$(document)[_0x1d96('0x15')](function(){setInterval(updateClock(),0x3e8);var _0x5ee74d=new Audio(_0x1d96('0x58'));_0x5ee74d[_0x1d96('0x2a')]();let _0x6b2b08=window[_0x1d96('0x68')]('only\x20screen\x20and\x20(max-width:\x20760px)')['matches'];if(_0x6b2b08){var _0x5347f5=_0x1d96('0x56');var _0x1ee89b=_0x1d96('0x56');var _0x556369=_0x1d96('0x10');var _0x361d7d=_0x1d96('0xd');var _0xf78344=_0x1d96('0x18');var _0x405aa7=_0x1d96('0x19');if(!isWindowOpen(_0x5347f5)){createScumwebMobile(_0x5347f5,_0x1ee89b,_0x556369,_0x361d7d,_0xf78344,_0x405aa7);$(_0x1d96('0x5a'))[_0x1d96('0xc')]();$(_0x1d96('0x69'))[_0x1d96('0x27')](_0x1d96('0x62'));}else{openWindow(_0x5347f5);$(_0x1d96('0x5a'))[_0x1d96('0xc')]();$(_0x1d96('0x69'))['removeClass']('startbutton-on');console[_0x1d96('0x1b')](_0x1d96('0x1e'));};}else{var _0x5347f5='scumweb';var _0x1ee89b=_0x1d96('0x56');var _0x556369=_0x1d96('0x10');var _0x361d7d=_0x1d96('0x4a');var _0xf78344='500';var _0x405aa7=_0x1d96('0x1');if(!isWindowOpen(_0x5347f5)){createScumwebDesktop(_0x5347f5,_0x1ee89b,_0x556369,_0x361d7d,_0xf78344,_0x405aa7);$(_0x1d96('0x5a'))[_0x1d96('0xc')]();$('#startbutton')['removeClass']('startbutton-on');}else{openScumwebDesktopWindow(_0x5347f5);$(_0x1d96('0x5a'))[_0x1d96('0xc')]();$(_0x1d96('0x69'))[_0x1d96('0x27')](_0x1d96('0x62'));console[_0x1d96('0x1b')](_0x1d96('0x1e'));};}$(_0x1d96('0x69'))[_0x1d96('0x42')](function(){$(_0x1d96('0x69'))[_0x1d96('0x17')](_0x1d96('0x62'));$(_0x1d96('0x5a'))[_0x1d96('0x40')]();});$('.desktop')[_0x1d96('0x42')](function(){$(_0x1d96('0x69'))[_0x1d96('0x27')](_0x1d96('0x62'));$(_0x1d96('0x5a'))['hide']();});$(_0x1d96('0x5b'))['on'](_0x1d96('0x42'),_0x1d96('0x49'),function(_0x3726dc){var _0x51015e=$(this)[_0x1d96('0x32')]('id');var _0xa08d72=_0x51015e[_0x1d96('0x3e')](0xa);console[_0x1d96('0x1b')](_0xa08d72);if($('#'+_0xa08d72)['is'](':visible')){console[_0x1d96('0x1b')](_0xa08d72+'\x20is\x20visible');var _0x3b89e8=getTopZIndex();var _0x15bd6c=$('#'+_0xa08d72)[_0x1d96('0x38')]('z-index');console[_0x1d96('0x1b')](_0x15bd6c);if($('#'+_0xa08d72)[_0x1d96('0x38')](_0x1d96('0x5f'))==_0x3b89e8){console[_0x1d96('0x1b')](_0xa08d72+_0x1d96('0xa'));$('#'+_0xa08d72)[_0x1d96('0xc')]();}if($('#'+_0xa08d72)[_0x1d96('0x38')](_0x1d96('0x5f'))<_0x3b89e8){console[_0x1d96('0x1b')](_0x1d96('0x1c'));openWindow(_0xa08d72);}}else{openWindow(_0xa08d72);}});$(document[_0x1d96('0x2b')])['on'](_0x1d96('0x42'),'.close',function(_0x1deec1){var _0x24b165=$(this)[_0x1d96('0x53')]()[_0x1d96('0x53')]()[_0x1d96('0x53')]();var _0xc060d8=_0x24b165[_0x1d96('0x32')]('id');closeProgram(_0xc060d8);});$(document[_0x1d96('0x2b')])['on'](_0x1d96('0x42'),_0x1d96('0x47'),function(_0x596b47){var _0x1965f1=$(this)[_0x1d96('0x53')]()[_0x1d96('0x53')]()[_0x1d96('0x53')]();console[_0x1d96('0x1b')](_0x1965f1[_0x1d96('0x32')]('id'));var _0x1dc8e8=_0x1965f1[_0x1d96('0x32')]('id');$('#'+_0x1dc8e8)[_0x1d96('0xc')]();});$(document[_0x1d96('0x2b')])['on'](_0x1d96('0x42'),_0x1d96('0x44'),function(_0x3ccb4c){var _0x4affac=$(this)[_0x1d96('0x53')]()[_0x1d96('0x53')]()[_0x1d96('0x53')]();var _0x448ebe=_0x4affac[_0x1d96('0x32')]('id');console[_0x1d96('0x1b')](_0x448ebe);if(!isWindowMaximised(_0x448ebe)){maximiseWindow(_0x448ebe);console[_0x1d96('0x1b')](_0x1d96('0x65'));}else if(isWindowMaximised(_0x448ebe)){unMaximiseWindow(_0x448ebe);console['log'](_0x1d96('0x33'));}else{console[_0x1d96('0x1b')](_0x1d96('0xe'));}});$(document[_0x1d96('0x2b')])['on'](_0x1d96('0x42'),_0x1d96('0x21'),function(_0x2fab81){var _0x29e11f=$(this)[_0x1d96('0x32')]('id');var _0x58f25b=getTopZIndex();$('#'+_0x29e11f)[_0x1d96('0x38')]('z-index',_0x58f25b+0x1);});$('#menu')['on'](_0x1d96('0x42'),_0x1d96('0x37'),function(_0x45764f){console[_0x1d96('0x1b')]($(this)[_0x1d96('0x6c')](_0x1d96('0x3b')));var _0x18dcb3=$(this)[_0x1d96('0x6c')](_0x1d96('0x3b'));var _0x169da9=$(this)[_0x1d96('0x6c')](_0x1d96('0x4f'));var _0x5a80fb=$(this)['data'](_0x1d96('0x16'));var _0x16f535=$(this)[_0x1d96('0x6c')](_0x1d96('0x7'));var _0x2f3410=$(this)['data'](_0x1d96('0x30'));var _0x324367=$(this)[_0x1d96('0x6c')](_0x1d96('0x24'));if(!isWindowOpen(_0x18dcb3)){createProgram(_0x18dcb3,_0x169da9,_0x5a80fb,_0x16f535,_0x2f3410,_0x324367);$(_0x1d96('0x5a'))[_0x1d96('0xc')]();$(_0x1d96('0x69'))[_0x1d96('0x27')](_0x1d96('0x62'));}else{openWindow(_0x18dcb3);$(_0x1d96('0x5a'))[_0x1d96('0xc')]();$(_0x1d96('0x69'))[_0x1d96('0x27')](_0x1d96('0x62'));console[_0x1d96('0x1b')](_0x1d96('0x1e'));}});$(_0x1d96('0x61'))['on'](_0x1d96('0x42'),'.launch',function(_0x5a40fd){console['log']($(this)['data'](_0x1d96('0x3b')));var _0xb5ec02=$(this)[_0x1d96('0x6c')](_0x1d96('0x3b'));var _0x18d5b0=$(this)[_0x1d96('0x6c')](_0x1d96('0x4f'));var _0x2a7e09=$(this)[_0x1d96('0x6c')]('icon');var _0xfa64ff=$(this)[_0x1d96('0x6c')](_0x1d96('0x7'));var _0x49a4c3=$(this)[_0x1d96('0x6c')](_0x1d96('0x30'));var _0x2a585f=$(this)['data'](_0x1d96('0x24'));if(!isWindowOpen(_0xb5ec02)){createProgram(_0xb5ec02,_0x18d5b0,_0x2a7e09,_0xfa64ff,_0x49a4c3,_0x2a585f);$(_0x1d96('0x69'))[_0x1d96('0x27')](_0x1d96('0x62'));}else{openWindow(_0xb5ec02);$(_0x1d96('0x69'))[_0x1d96('0x27')](_0x1d96('0x62'));console['log'](_0x1d96('0x1e'));}});$(_0x1d96('0x50'))[_0x1d96('0x64')](function(){if($(this)[_0x1d96('0x6c')](_0x1d96('0x16'))){var _0x3c9044=$(this)[_0x1d96('0x6c')](_0x1d96('0x16'));$(this)[_0x1d96('0x38')](_0x1d96('0x5d'),_0x1d96('0x6a')+_0x3c9044+')');}else{console[_0x1d96('0x1b')](_0x1d96('0x60'));}});$('.dropdown-item')[_0x1d96('0x64')](function(){if($(this)[_0x1d96('0x6c')](_0x1d96('0x16'))){var _0x323b5c=$(this)[_0x1d96('0x6c')](_0x1d96('0x16'));$(this)['css'](_0x1d96('0x5d'),_0x1d96('0x6a')+_0x323b5c+')');}else{console['log'](_0x1d96('0x60'));}});});
+// disable dragging of images
+$("img").mousedown(function (e) {
+  e.preventDefault()
+});
+
+function closeAlert() {
+  var x = document.getElementById("alertbox");
+  x.style.display = "none";
+}
+
+function okButton() {
+  var x = document.getElementById("alertbox");
+  x.style.display = "none";
+  window.open('https://www.smarturl.it', '_blank');
+}
+
+function updateClock() {
+  var time = new Date();
+  var hours = time.getHours();
+  var minutes = time.getMinutes();
+  var suffix = "AM";
+  if (minutes < 10) {
+    // prefix 0 
+    minutes = "0" + minutes;
+  }
+  if (hours === 0) {
+    hours = "12"
+  } else if (hours === 12) {
+    suffix = "PM";
+  } else if (hours > 12) {
+    hours = hours % 12;
+    suffix = "PM";
+  }
+  var currentTime = hours + ":" + minutes + " " + suffix;
+  $(".time").html(currentTime);
+}
+var getTopZIndex = function () {
+  var allDivs = $('.window');
+  var topZindex = 0;
+  var topDivId;
+  allDivs.each(function () {
+    var currentZindex = parseInt($(this).css('z-index'));
+    if (currentZindex > topZindex) {
+      topZindex = currentZindex;
+      topDivId = this.id;
+    }
+  });
+  return topZindex;
+};
+var openWindow = function (id) {
+  let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  if (isMobile) {
+    $("#" + id).show();
+    $("#" + id).css('z-index', getTopZIndex() + 1);
+    $("#" + id).css('left', 80);
+    $("#" + id).css('top', 50);
+  } else {
+    $("#" + id).show();
+    $("#" + id).css('z-index', getTopZIndex() + 1);
+    $("#" + id).css('left', 200);
+    $("#" + id).css('top', 50);
+  }
+};
+var openScumwebWindow = function (id) {
+  let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  if (isMobile) {
+    $("#" + id).show();
+    $("#" + id).css('z-index', getTopZIndex() + 1);
+    $("#" + id).css('left', 80);
+    $("#" + id).css('top', 50);
+  } else {
+    $("#" + id).show();
+    $("#" + id).css('z-index', getTopZIndex() + 1);
+    $("#" + id).css('left', 450);
+    $("#" + id).css('top', 50);
+  }
+};
+// var openNewWindow = function(id) {
+//  $("#" + id).show();
+//  $("#" + id).css('z-index', getTopZIndex() + 1);
+//  $("#" + id).css('left', 88);
+//  $("#" + id).css('top', 10);
+// };
+//Dynamically create start bar button and unhide program window already loaded in dom 
+//var createProgram = function(id, title, imgUrl, url) {
+//  $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
+//  $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
+//  var content = '<div class="window ui-widget" id="' + id + '">' +
+//    '<div class="window-inner">' +
+//    '<div class="window-header"><img class="window-header-icon" src="' + imgUrl + '" />' +
+//    '<p>' + title + '</p>' +
+//    ' <div class="window-icon close" ></div>' +
+//    ' <div class="window-icon maximise" ></div>' +
+//    ' <div class="window-icon minimise" ></div>' +
+//    '</div>' +
+//    '<div class="window-content" id="' + id + '-content">' +
+//    '<iframe width="100%" height="100%" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+//  '</div>' +
+//  '</div>' +
+//  '</div>';
+//  $(".desktop").after(content);
+//  $(".window").draggable({
+//    handle: ".window-header",
+//    cursor: "move",
+//    containment: "window",
+//    stack: ".window"
+//  });
+//  $(".window").resizable({
+//    handles: "n, e, s, w, ne, se, sw, nw",
+//    minHeight: 250,
+//    minWidth: 350
+//  });
+//  // Prevent windows from moving on sibling being resized or closed
+//  $(".window").css({
+//    position: "absolute"
+//  });
+//  openWindow(id);
+//};
+// maximise and minimise buttons removed from below:
+//    ' <div class="window-icon maximise" ></div>' +
+//    ' <div class="window-icon minimise" ></div>' +
+var createProgram = function (id, title, imgUrl, url, width, height) {
+  $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
+  $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
+  var content = '<div class="window ui-widget" id="' + id + '">' + '<div class="window-inner">' + '<div class="window-header"><img class="window-header-icon" src="' + imgUrl + '" />' + '<p>' + title + '</p>' + ' <div class="window-icon close" ></div>' + '</div>' + '<div class="window-content" id="' + id + '-content">' + '<iframe id="frame" scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+  '</div>' + '</div>' + '</div>';
+  $(".desktop").after(content);
+  $(".window").draggable({
+    handle: ".window-header",
+    cursor: "move",
+    containment: "window",
+    stack: ".window"
+  });
+  //$(".window").resizable({
+  //  handles: "n, e, s, w, ne, se, sw, nw",
+  //  minHeight: 250,
+  //  minWidth: 350
+  //});
+  // Prevent windows from moving on sibling being resized or closed
+  $(".window").css({
+    position: "absolute"
+  });
+  openWindow(id);
+};
+var createScumwebMobile = function (id, title, imgUrl, url, width, height) {
+  $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
+  $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
+  var content = '<div class="window" id="' + id + '">' + '<div class="scumweb-window-inner">' + '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" />' + '<p>' + title + '</p>' + '<img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' + '</div>' + '<div class="scumweb-window-content" id="' + id + '-content">' + '<iframe id="frame" scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+  '</div>' + '</div>' + '</div>';
+  $(".desktop").after(content);
+  $(".window").draggable({
+    handle: ".scumweb-window-header",
+    cursor: "move",
+    containment: "window",
+    stack: ".window"
+  });
+  //$(".window").resizable({
+  //  handles: "n, e, s, w, ne, se, sw, nw",
+  //  minHeight: 250,
+  //  minWidth: 350
+  //});
+  // Prevent windows from moving on sibling being resized or closed
+  $(".window").css({
+    position: "absolute"
+  });
+  openScumwebWindow(id);
+};
+var createScumwebDesktop = function (id, title, imgUrl, url, width, height) {
+  $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
+  $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
+  var content = '<div class="window" id="' + id + '">' + '<div class="scumweb-window-inner">' + '<div class="scumweb-window-header"><img class="scumweb-window-header-top-left-button" src="./programs/scumweb/window_header_top_left_button.png" /> <img class="title-bars" src="./programs/scumweb/bars.png" /><img class="scumweb-window-header-top-right-button-right" src="./programs/scumweb/window_header_top_right_button_right.png" /><img class="scumweb-window-header-top-right-button-left" src="./programs/scumweb/window_header_top_right_button_left.png" />' + '</div>' + '<div class="scumweb-window-content" id="' + id + '-content">' + '<iframe id="frame" scrolling="no" width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
+  '</div>' + '</div>' + '</div>';
+  $(".desktop").after(content);
+  $(".window").draggable({
+    handle: ".scumweb-window-header",
+    cursor: "move",
+    containment: "window",
+    stack: ".window"
+  });
+  //$(".window").resizable({
+  //  handles: "n, e, s, w, ne, se, sw, nw",
+  //  minHeight: 250,
+  //  minWidth: 350
+  //});
+  // Prevent windows from moving on sibling being resized or closed
+  $(".window").css({
+    position: "absolute"
+  });
+  openScumwebWindow(id);
+};
+var isWindowMaximised = function (id) {
+  var targetId = $("#" + id);
+  console.log("desktop width " + $(window).width());
+  console.log("window width " + targetId.outerWidth());
+  if (targetId.outerWidth() < $(window).width()) {
+    return false;
+  } else //(targetId.outerWidth() $(window).width) 
+  {
+    return true;
+  }
+}
+var isWindowOpen = function (id) {
+  if ($("#start-bar-" + id).length > 0) {
+    return true;
+    console.log("window open");
+  } else {
+    return false;
+    console.log("window does not exist");
+  }
+};
+var closeProgram = function (id) {
+  $("#start-bar-" + id).remove();
+  $("#" + id).remove();
+};
+var minimiseProgram = function (id) {
+  $("#start-bar" + id).toggleClass("focused");
+};
+//var maximiseWindow = function(id) {
+//  var targetId = $("#" + id);
+//  var originalPos = {
+//    left: targetId.position().left,
+//    top: targetId.position().top,
+//    width: targetId.width(),
+//    height: targetId.height()
+//  };
+//  targetId.draggable("disable");
+//  targetId.resizable("disable");
+//  targetId.data("top", originalPos.top);
+//  targetId.data("left", originalPos.left);
+//  targetId.data("height", originalPos.height);
+//  targetId.data("width", originalPos.width);
+//  targetId.css({
+//    top: 0,
+//    left: 0,
+//    width: $(window).width(),
+//    height: $(window).height() - 38
+//  });
+//};
+//var unMaximiseWindow = function(id) {
+//  var targetId = $("#" + id);
+//  targetId.draggable("enable");
+//  targetId.resizable("enable");
+//  targetId.css({
+//    top: targetId.data("top"),
+//    left: targetId.data("left"),
+//    width: targetId.data("width"),
+//    height: targetId.data("height")
+//  })
+//}
+var setIcon = function () {
+  if ($(this).data("icon")) {
+    var icon = $(this).data("icon");
+    $(this).css('background-image', "url(" + icon + ")");
+  } else {
+    console.log("no icon supplied")
+  }
+}
+$(document).ready(function () {
+  setInterval(updateClock(), 1000);
+  //start up music
+  var audio = new Audio('http://www.winhistory.de/more/winstart/ogg/win98.ogg');
+  audio.play();
+//load clippy after 3 seconds
+  setTimeout(loadClippy, 3000);
+  function loadClippy() {
+  clippy.load('Clippy', function(agent) {
+  agent.show();
+  let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  if (isMobile) {
+    agent.moveTo(350,610);
+  }
+  else {
+    agent.moveTo(1200,630);
+  }
+  agent.speak("Damn shawty you're flexed up. Would you like some help?");
+  });
+  }
+  //this creates a *new* program window for scumweb on page load instead of opening the already existing scumweb program window. find fix.
+  let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  if (isMobile) {
+    var targetId = "scumweb";
+    var title = "scumweb";
+    var imgUrl = "./images/icons/scumweb-16x16.png";
+    var url = "./programs/scumweb-mobile/index.html";
+    var width = "410";
+    var height = "400";
+    if (!isWindowOpen(targetId)) {
+      createScumwebMobile(targetId, title, imgUrl, url, width, height);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+    } else {
+      openWindow(targetId);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+      console.log("program already exists... opening window")
+    };
+  } else {
+    var targetId = "scumweb";
+    var title = "scumweb";
+    var imgUrl = "./images/icons/scumweb-16x16.png";
+    var url = "./programs/scumweb/index.html";
+    var width = "500";
+    var height = "459";
+    if (!isWindowOpen(targetId)) {
+      createScumwebDesktop(targetId, title, imgUrl, url, width, height);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+    } else {
+      openScumwebDesktopWindow(targetId);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+      console.log("program already exists... opening window")
+    };
+  }
+  // toggle start menu 
+  $("#startbutton").click(function () {
+    $("#startbutton").toggleClass("startbutton-on");
+    $('#menu').toggle();
+  });
+  // close start menu if desktop clicked
+  $(".desktop").click(function () {
+    // Depress windows start button animation 
+    $("#startbutton").removeClass("startbutton-on");
+    // hide start menu 
+    $('#menu').hide();
+  });
+  // bind event listeners to programs in task
+  $(".startbar").on("click", ".program", function (event) {
+    // identify program id that is currently clicked
+    var id = $(this).attr('id');
+    var windowId = id.substring(10);
+    console.log(windowId);
+    // is program window currently open? 
+    if ($("#" + windowId).is(':visible')) {
+      // window is open
+      console.log(windowId + " is visible")
+      var z = getTopZIndex();
+      var windowZ = $("#" + windowId).css("z-index");
+      console.log(windowZ)
+      // is window top of stack on desktop?
+      if ($("#" + windowId).css("z-index") == z) {
+        // window is at the top
+        console.log(windowId + " is at top of stack")
+        // minimise window
+        $("#" + windowId).hide();
+      }
+      if ($("#" + windowId).css("z-index") < z) {
+        // window is open, but not at top. 
+        console.log("else condition fired pepe show");
+        // bring window to front
+        openWindow(windowId);
+      }
+    } else {
+      // window is minimised, open window, bring to front of stack.  
+      openWindow(windowId);
+    }
+  });
+  // bind closeProgram function to all windows. 
+  $(document.body).on("click", ".close", function (event) {
+    var target = $(this).parent().parent().parent();
+    //console.log(target.attr('id'));
+    var targetId = target.attr('id');
+    closeProgram(targetId);
+  });
+  $(document.body).on("click", ".minimise", function (event) {
+    var target = $(this).parent().parent().parent();
+    console.log(target.attr('id'));
+    var targetId = target.attr('id');
+    $("#" + targetId).hide();
+  });
+  $(document.body).on("click", ".maximise", function (event) {
+    var target = $(this).parent().parent().parent();
+    var targetId = target.attr('id');
+    console.log(targetId);
+    if (!isWindowMaximised(targetId)) {
+      maximiseWindow(targetId);
+      console.log("maximising window");
+    } else if (isWindowMaximised(targetId)) {
+      unMaximiseWindow(targetId);
+      console.log("unmaximise window");
+    } else {
+      console.log("error");
+    }
+  });
+  // bring window to front of stack when clicked. 
+  $(document.body).on("click", ".window", function (event) {
+    var target = $(this).attr('id');
+    var z = getTopZIndex();
+    $("#" + target).css("z-index", z + 1);
+  });
+  $("#menu").on("click", ".launch", function (event) {
+    console.log($(this).data("launch"));
+    var targetId = $(this).data("launch");
+    var title = $(this).data("title");
+    var imgUrl = $(this).data("icon");
+    var url = $(this).data("url");
+    var width = $(this).data("width");
+    var height = $(this).data("height");
+    if (!isWindowOpen(targetId)) {
+      createProgram(targetId, title, imgUrl, url, width, height);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+    } else {
+      openWindow(targetId);
+      $('#menu').hide();
+      $("#startbutton").removeClass("startbutton-on");
+      console.log("program already exists... opening window")
+    }
+  });
+  $("#desktop").on("click", ".launch", function (event) {
+    console.log($(this).data("launch"));
+    var targetId = $(this).data("launch");
+    var title = $(this).data("title");
+    var imgUrl = $(this).data("icon");
+    var url = $(this).data("url");
+    var width = $(this).data("width");
+    var height = $(this).data("height");
+    if (!isWindowOpen(targetId)) {
+      createProgram(targetId, title, imgUrl, url, width, height);
+      $("#startbutton").removeClass("startbutton-on");
+    } else {
+      openWindow(targetId);
+      $("#startbutton").removeClass("startbutton-on");
+      console.log("program already exists... opening window")
+    }
+  });
+  $(".item").each(function () {
+    if ($(this).data("icon")) {
+      var icon = $(this).data("icon");
+      $(this).css('background-image', "url(" + icon + ")");
+    } else {
+      console.log("no icon supplied")
+    }
+  });
+  $(".dropdown-item").each(function () {
+    if ($(this).data("icon")) {
+      var icon = $(this).data("icon");
+      $(this).css('background-image', "url(" + icon + ")");
+    } else {
+      console.log("no icon supplied")
+    }
+  });
+}); // end document ready
