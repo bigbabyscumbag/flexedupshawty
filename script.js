@@ -75,50 +75,7 @@ var openScumwebWindow = function (id) {
     $("#" + id).css('top', 50);
   }
 };
-// var openNewWindow = function(id) {
-//  $("#" + id).show();
-//  $("#" + id).css('z-index', getTopZIndex() + 1);
-//  $("#" + id).css('left', 88);
-//  $("#" + id).css('top', 10);
-// };
-//Dynamically create start bar button and unhide program window already loaded in dom 
-//var createProgram = function(id, title, imgUrl, url) {
-//  $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
-//  $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
-//  var content = '<div class="window ui-widget" id="' + id + '">' +
-//    '<div class="window-inner">' +
-//    '<div class="window-header"><img class="window-header-icon" src="' + imgUrl + '" />' +
-//    '<p>' + title + '</p>' +
-//    ' <div class="window-icon close" ></div>' +
-//    ' <div class="window-icon maximise" ></div>' +
-//    ' <div class="window-icon minimise" ></div>' +
-//    '</div>' +
-//    '<div class="window-content" id="' + id + '-content">' +
-//    '<iframe width="100%" height="100%" src="' + url + '" frameborder="0" allowfullscreen></iframe>'
-//  '</div>' +
-//  '</div>' +
-//  '</div>';
-//  $(".desktop").after(content);
-//  $(".window").draggable({
-//    handle: ".window-header",
-//    cursor: "move",
-//    containment: "window",
-//    stack: ".window"
-//  });
-//  $(".window").resizable({
-//    handles: "n, e, s, w, ne, se, sw, nw",
-//    minHeight: 250,
-//    minWidth: 350
-//  });
-//  // Prevent windows from moving on sibling being resized or closed
-//  $(".window").css({
-//    position: "absolute"
-//  });
-//  openWindow(id);
-//};
-// maximise and minimise buttons removed from below:
-//    ' <div class="window-icon maximise" ></div>' +
-//    ' <div class="window-icon minimise" ></div>' +
+
 var createProgram = function (id, title, imgUrl, url, width, height) {
   $("#startbutton").after("<span class='program' id='start-bar-" + id + "' >" + title + "</span>");
   $("#start-bar-" + id).css('background-image', 'url(' + imgUrl + ')');
@@ -215,38 +172,7 @@ var closeProgram = function (id) {
 var minimiseProgram = function (id) {
   $("#start-bar" + id).toggleClass("focused");
 };
-//var maximiseWindow = function(id) {
-//  var targetId = $("#" + id);
-//  var originalPos = {
-//    left: targetId.position().left,
-//    top: targetId.position().top,
-//    width: targetId.width(),
-//    height: targetId.height()
-//  };
-//  targetId.draggable("disable");
-//  targetId.resizable("disable");
-//  targetId.data("top", originalPos.top);
-//  targetId.data("left", originalPos.left);
-//  targetId.data("height", originalPos.height);
-//  targetId.data("width", originalPos.width);
-//  targetId.css({
-//    top: 0,
-//    left: 0,
-//    width: $(window).width(),
-//    height: $(window).height() - 38
-//  });
-//};
-//var unMaximiseWindow = function(id) {
-//  var targetId = $("#" + id);
-//  targetId.draggable("enable");
-//  targetId.resizable("enable");
-//  targetId.css({
-//    top: targetId.data("top"),
-//    left: targetId.data("left"),
-//    width: targetId.data("width"),
-//    height: targetId.data("height")
-//  })
-//}
+
 var setIcon = function () {
   if ($(this).data("icon")) {
     var icon = $(this).data("icon");
@@ -258,9 +184,10 @@ var setIcon = function () {
 $(document).ready(function () {
   setInterval(updateClock(), 1000);
   //start up music
-  var audio = new Audio('http://www.winhistory.de/more/winstart/ogg/win98.ogg');
+  //var audio = new Audio('./audio/win98.ogg');   // OG startup audio
+  var audio = new Audio('./audio/startupsound.mp3');
   audio.play();
-//load clippy after 3 seconds
+  //load clippy after 3 seconds
   setTimeout(loadClippy, 3000);
   function loadClippy() {
   clippy.load('Clippy', function(agent) {
