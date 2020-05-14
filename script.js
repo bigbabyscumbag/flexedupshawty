@@ -184,7 +184,8 @@ var setIcon = function () {
 $(document).ready(function () {
   setInterval(updateClock(), 1000);
   //start up music
-  var audio = new Audio('http://www.winhistory.de/more/winstart/ogg/win98.ogg');
+  //var audio = new Audio('./audio/win98.ogg');   // OG startup audio
+  var audio = new Audio('./audio/startupsound.mp3');
   audio.play();
   //load clippy after 3 seconds
   setTimeout(loadClippy, 3000);
