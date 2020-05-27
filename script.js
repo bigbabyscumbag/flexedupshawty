@@ -11,7 +11,7 @@ function closeAlert() {
 function okButton() {
   var x = document.getElementById("alertbox");
   x.style.display = "none";
-  window.open('https://www.smarturl.it', '_blank');
+  window.open('https://ffm.to/flexedupshawty', '_blank');
 }
 
 function updateClock() {
