@@ -44,6 +44,7 @@ body {
 
 .desktop-icon .title {
   background-color: #008582;
+  width: 100%;
   line-height: 13px;
   font-size: 9px;
   overflow: hidden;
