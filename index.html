@@ -23,22 +23,12 @@ Microsoft® and other trademarks are respective of their own respective holders,
 respectively, in the United States and/or other countries, respectively.
 -->
 <html lang="en">
-
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122946670-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-122946670-2');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=0.75">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./clippy.css" type="text/css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" type="text/css" />
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -62,37 +52,39 @@ respectively, in the United States and/or other countries, respectively.
 </head>
 
 <body>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" type="text/css" />
     <div class="desktop"></div>
-    <div id="desktop">
-        <div class="desktop-icon">
-            <div id="merch-store" onclick="window.open('https://bigbabyscumbagstore.com/', '_blank');"> <img src="./images/icons/shop-32x32.png">
+<div id="desktop">
+    <div class="desktop-icon">
+        <div id="merch-store" onclick="window.open('https://bigbabyscumbagstore.com/', '_blank');"> <img src="./images/icons/shop-32x32.png">
                 <div class="title">Merch Store</div>
-            </div> <br>
-            <div id="instagram" onclick="window.open('https://instagram.com/bigbabyscumbag', '_blank');"> <img src="./images/icons/instagram-32x32.png">
-                <div class="title">Instagram</div>
-            </div> <br>
-            <div id="twitter" onclick="window.open('https://twitter.com/bigbabyscumbag', '_blank');"> <img src="./images/icons/twitter-32x32.png">
-                <div class="title">Twitter</div>
-            </div> <br>
-            <div id="email-me"> <a href="mailto:bigbabytellem@gmail.com"> <img src="./images/icons/email-32x32.png"> </a>
-                <div class="title">Email Me</div>
-            </div> <br> <img src="./images/icons/spotify-32x32.png" class="launch" data-launch="spotifyPlayer" data-title="Spotify Player" data-icon="./images/icons/spotify-16x16.png" data-url="./programs/spotify-player/index.html" data-width="300" data-height="395">
-            <div
-                class="title">Spotify Player</div> <br> <img src="./images/icons/soundcloud-32x32.png" class="launch" data-launch="soundcloudPlayer" data-title="SoundCloud Player" data-icon="./images/icons/soundcloud-16x16.png" data-url="./programs/soundcloud-player/index.html"
-            data-width="300" data-height="395">
-        <div class="title">SoundCloud Player</div> <br> <img src="./images/icons/minesweeper-32x32.png" class="launch" data-launch="minesweeper" data-title="Minesweeper" data-icon="./images/icons/minesweeper-16x16.png" data-url="./programs/minesweeper/index.html" data-width="280"
-            data-height="320">
-        <div class="title">Minesweeper</div>
-         <br>
-         <img src="./images/icons/directory_zipper-32x32.png" class="launch" data-launch="juvenile-hell-zip" data-title="JUVENILE HELL.ZIP" data-icon="./images/icons/directory_zipper-16x16.png" data-url="./programs/juvenile-hell-zip/index.html" data-width="300"
-            data-height="395">
-        <div class="title-zips">JUVENILE_HELL.ZIP</div>
+        </div>
         <br>
-         <img src="./images/icons/directory_zipper-32x32.png" class="launch" data-launch="big-baby-earnhardt-zip" data-title="BIG BABY EARNHARDT.ZIP" data-icon="./images/icons/directory_zipper-16x16.png" data-url="./programs/big-baby-earnhardt-zip/index.html" data-width="300"
-            data-height="395">
+        <div id="instagram" onclick="window.open('https://instagram.com/bigbabyscumbag', '_blank');"> <img src="./images/icons/instagram-32x32.png">
+            <div class="title">Instagram</div>
+        </div>
+        <br>
+        <div id="twitter" onclick="window.open('https://twitter.com/bigbabyscumbag', '_blank');"> <img src="./images/icons/twitter-32x32.png">
+            <div class="title">Twitter</div>
+        </div> <br>
+        <div id="email-me"> <a href="mailto:bigbabytellem@gmail.com"> <img src="./images/icons/email-32x32.png"> </a>
+            <div class="title">Email Me</div>
+        </div>
+        <br>
+        <img src="./images/icons/spotify-32x32.png" class="launch" data-launch="spotifyPlayer" data-title="Spotify Player" data-icon="./images/icons/spotify-16x16.png" data-url="./programs/spotify-player/index.html" data-width="300" data-height="395">
+        <div class="title">Spotify Player</div> <br> <img src="./images/icons/soundcloud-32x32.png" class="launch" data-launch="soundcloudPlayer" data-title="SoundCloud Player" data-icon="./images/icons/soundcloud-16x16.png" data-url="./programs/soundcloud-player/index.html" data-width="300" data-height="395">
+        <div class="title">SoundCloud Player</div> <br> <img src="./images/icons/minesweeper-32x32.png" class="launch" data-launch="minesweeper" data-title="Minesweeper" data-icon="./images/icons/minesweeper-16x16.png" data-url="./programs/minesweeper/index.html" data-width="280" data-height="320">
+        <div class="title">Minesweeper</div>
+        <br>
+    <!--    <img src="./images/icons/directory_zipper-32x32.png" class="launch" data-launch="juvenile-hell-zip" data-title="JUVENILE HELL.ZIP" data-icon="./images/icons/directory_zipper-16x16.png" data-url="./programs/juvenile-hell-zip/index.html" data-width="300" data-height="395">
+        <div class="title-zips">JUVENILE_HELL.ZIP</div>
+        <br>-->
+        <img src="./images/icons/directory_zipper-32x32.png" class="launch" data-launch="big-baby-earnhardt-zip" data-title="BIG BABY EARNHARDT.ZIP" data-icon="./images/icons/directory_zipper-16x16.png" data-url="./programs/big-baby-earnhardt-zip/index.html" data-width="300" data-height="395">
         <div class="title-zips">BIG_BABY_<br>EARNHARDT.ZIP</div>
-    </div>
+        <br>
+        <div id="merch-store" onclick="window.open('https://ffm.to/flexedupshawty', '_blank');"> <img src="./images/icons/face-48x48.png">
+            <div class="title">Pre-Save Mixtape</div>
+        </div>
+        </div>
     <div class="startbar">
         <div id="startbutton" class="startbutton-off"> <b>Start</b></div>
         <div class="time"></div>
@@ -110,11 +102,12 @@ respectively, in the United States and/or other countries, respectively.
             </li>
             <li class="item more" data-icon="./images/icons/favorites-25x25.png">Links
                 <ul class="dropdown-content">
+                    <li class="dropdown-item" data-icon="./images/icons/face-16x16.png" onclick="window.open('https://ffm.to/flexedupshawty', '_blank');">Pre-Save Mixtape</li>
+                    <li class="dropdown-item" data-icon="./images/icons/spotify-16x16.png" onclick="window.open('https://open.spotify.com/artist/3WjxW7xt0RCSotYoQBzEXB?si=oBDqQiL_S_qTjmSfSRF4cg', '_blank');">Follow on Spotify</li>
                     <li class="dropdown-item" data-icon="./images/icons/shop-black-16x16.png" onclick="window.open('https://bigbabyscumbagstore.com/', '_blank');">Merch Store</li>
                     <li class="dropdown-item" data-icon="./images/icons/twitter-16x16.png" onclick="window.open('https://twitter.com/bigbabyscumbag', '_blank');">Twitter</li>
                     <li class="dropdown-item" data-icon="./images/icons/instagram-16x16.png" onclick="window.open('https://instagram.com/bigbabyscumbag', '_blank');">Instagram</li>
                     <li class="dropdown-item" data-icon="./images/icons/email-16x16.png" onclick="window.open('mailto:bigbabytellem@gmail.com', '_blank');">Email Me</li>
-                    <li class="dropdown-item" data-icon="./images/icons/spotify-16x16.png" onclick="window.open('https://open.spotify.com/artist/3WjxW7xt0RCSotYoQBzEXB?si=oBDqQiL_S_qTjmSfSRF4cg', '_blank');">Follow on Spotify</li>
                 </ul>
             </li>
             <li class="item more" data-icon="./images/icons/music.png">Music
@@ -126,26 +119,43 @@ respectively, in the United States and/or other countries, respectively.
             </li>
             <li class="item more" data-icon="./images/icons/videos.png">Videos
                 <ul class="dropdown-content">
-                    <li class="dropdown-item launch" data-launch="daleEarnhardt" data-title="DALE_EARNHARDT.mp4" data-icon="./images/icons/videos.png" data-url="https://www.youtube.com/embed/-CklZVhiZ5M">DALE_EARNHARDT.mp4</li>
+                    <li class="dropdown-item launch" data-launch="FTPvid" data-title="fuck the police.mp4" data-icon="./images/icons/videos.png" data-url="./programs/videos/fuck-the-police/index.html" data-width="400" data-height="266">fuck the police.mp4</li>
+
+                    <li class="dropdown-item launch" data-launch="BLACKTEEvid" data-title="black tee.mp4" data-icon="./images/icons/videos.png" data-url="./programs/videos/black-tee/index.html" data-width="400" data-height="266">black tee.mp4</li>
+
+                    <li class="dropdown-item launch" data-launch="EDMDALEvid" data-title="edm dale.mp4" data-icon="./images/icons/videos.png" data-url="./programs/videos/edm-dale/index.html" data-width="400" data-height="266">edm dale.mp4</li>
+
+                    <li class="dropdown-item launch" data-launch="KAIBAvid" data-title="kaiba.mp4" data-icon="./images/icons/videos.png" data-url="./programs/videos/kaiba/index.html" data-width="400" data-height="266">kaiba.mp4</li>
+
+                    <li class="dropdown-item launch" data-launch="MIRRORTESTvid" data-title="mirror test.mp4" data-icon="./images/icons/videos.png" data-url="./programs/videos/mirror-test/index.html" data-width="400" data-height="266">mirror test.mp4</li>
                 </ul>
             </li>
             <li class="item more" data-icon="./images/icons/photos-folder.png">Photos
                 <ul class="dropdown-content">
-                    <li class="dropdown-item launch" data-launch="flex1" data-title="FLEX_001.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/FLEX_001.jpg" data-width="263" data-height="350">FLEX_001.jpg</li>
-                    <li class="dropdown-item launch" data-launch="flex2" data-title="FLEX_002.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/FLEX_002.jpg" data-width="263" data-height="350">FLEX_002.jpg</li>
-                    <li class="dropdown-item launch" data-launch="flex3" data-title="FLEX_003.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/FLEX_003.jpg" data-width="287" data-height="350">FLEX_003.jpg</li>
-                    <li class="dropdown-item launch" data-launch="flex4" data-title="FLEX_004.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/FLEX_004.jpg" data-width="197" data-height="350">FLEX_004.jpg</li>
-                    <li class="dropdown-item launch" data-launch="flex5" data-title="FLEX_005.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/FLEX_005.jpg" data-width="251" data-height="350">FLEX_005.jpg</li>
-                    <li class="dropdown-item launch" data-launch="flex6" data-title="FLEX_006.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/FLEX_006.jpg" data-width="263" data-height="350">FLEX_006.jpg</li>
-                    <li class="dropdown-item launch" data-launch="flex7" data-title="FLEX_007.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/FLEX_007.jpg" data-width="263" data-height="350">FLEX_007.jpg</li>
-                    <li class="dropdown-item launch" data-launch="sillyrabbit" data-title="SILLYRABBIT.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/SILLYRABBIT.png" data-width="470" data-height="350">SILLYRABBIT.jpg</li>
+                    <li class="dropdown-item launch" data-launch="cd-rom" data-title="cd-rom.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/cd-rom.jpg" data-width="400" data-height="267">cd-rom.jpg</li>
+
+                    <li class="dropdown-item launch" data-launch="chain" data-title="chain.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/chain.jpg" data-width="400" data-height="267">chain.jpg</li>
+
+                    <li class="dropdown-item launch" data-launch="hat" data-title="hat.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/hat.jpg" data-width="400" data-height="267">hat.jpg</li>
+
+                    <li class="dropdown-item launch" data-launch="jeff" data-title="jeff.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/jeff.jpg" data-width="400" data-height="267">jeff.jpg</li>
+
+                    <li class="dropdown-item launch" data-launch="selfie" data-title="selfie.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/selfie.jpg" data-width="400" data-height="267">selfie.jpg</li>
+
+                    <li class="dropdown-item launch" data-launch="shirt" data-title="shirt.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/shirt.jpg" data-width="400" data-height="267">shirt.jpg</li>
+
+                    <li class="dropdown-item launch" data-launch="tracklist" data-title="tracklist.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/tracklist.jpg" data-width="400" data-height="267">tracklist.jpg</li>
+
+                    <li class="dropdown-item launch" data-launch="vinyl" data-title="vinyl.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/vinyl.jpg" data-width="400" data-height="300">vinyl.jpg</li>
+
+                    <li class="dropdown-item launch" data-launch="sillyrabbit" data-title="SILLYRABBIT.jpg" data-icon="./images/icons/photos.ico" data-url="./images/photos/SILLYRABBIT.png" data-width="400" data-height="298">SILLYRABBIT.jpg</li>
                 </ul>
             </li>
             <script>
-              function playError() {
-                var errorsound = document.getElementById("error-sound");
-                errorsound.play();
-              }
+                function playError() {
+                    var errorsound = document.getElementById("error-sound");
+                    errorsound.play();
+                }
             </script>
             <audio id="error-sound" src="./audio/error.mp3" autostart="false"></audio>
             <li class="item" data-icon="./images/icons/settings.ico" onclick="playError()">Settings</li>
@@ -156,11 +166,20 @@ respectively, in the United States and/or other countries, respectively.
             <li class="item" data-icon="./images/icons/shutdown.ico" onclick="playError()">Shutdown</li>
         </ul>
     </div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
-    <script src='./clippy.js'></script>
-    <script src="./jquery.ui.touch-punch.min.js"></script>
-    <script src="./script.js"></script>
-</body>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+        <script src='./clippy.js'></script>
+        <script src="./jquery.ui.touch-punch.min.js"></script>
+        <script src="./script.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122946670-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-122946670-2');
+        </script>
+</body>
 </html>
