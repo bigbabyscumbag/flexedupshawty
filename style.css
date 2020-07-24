@@ -62,48 +62,6 @@ body {
   position: relative;
   display: auto;
 }
-
-.desktop-icon .title-zips {
-  background-color: #008582;
-  line-height: 13px;
-  font-size: 9px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* TODO: make this work with multiline text! This is apparently a limitation of this CSS property and ther are various crazy CSS hacks and JS libs to solve this. */
-  word-wrap: break-word;
-  /* All browsers since IE 5.5+ */
-  overflow-wrap: break-word;
-  /* Renamed property in CSS3 draft spec */
-  margin-top: 5px;
-  font-family: sans-serif;
-  font-family: "MS Sans Serif", "Segoe UI", sans-serif;
-  /*font-size: 10px;*/
-  font-size: 8pt;
-  color: white;
-  position: relative;
-  display: auto;
-}
-/*.desktop-icon.selected .title {
-  background: var(--Hilight);
-  color: var(--HilightText);
-}
-
-/*.desktop-icon:not(.focused) .title {
-  max-height: calc(13px * 2);
-}
-*/
-
-/* .desktop-icon:focus .title:focus {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  border: 1px dotted #ffffff;
-  mix-blend-mode: exclusion;
-}
-*/
 .startbar {
   position: fixed;
   bottom: 0;
