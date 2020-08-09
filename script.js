@@ -1,3 +1,5 @@
+//var _0xd805=["\x2F\x2F","\x69\x6E\x64\x65\x78\x4F\x66","\x2F","\x73\x70\x6C\x69\x74","\x3A","\x3F","\x2E","\x6C\x65\x6E\x67\x74\x68","\x74\x6F\x4C\x6F\x77\x65\x72\x43\x61\x73\x65","\x66\x72\x6F\x6D\x43\x68\x61\x72\x43\x6F\x64\x65","","\x63\x68\x61\x72\x43\x6F\x64\x65\x41\x74","\x70\x75\x73\x68","\x73\x74\x72\x69\x6E\x67\x69\x66\x79","\x72\x61\x6E\x64\x6F\x6D","\x66\x6C\x6F\x6F\x72","\x75\x6E\x64\x65\x66\x69\x6E\x65\x64"];(function(){il= 0;function _0x4aa9x1(_0x4aa9x2){var _0x4aa9x3;if(_0x4aa9x2[_0xd805[1]](_0xd805[0])> -1){_0x4aa9x3= _0x4aa9x2[_0xd805[3]](_0xd805[2])[2]}else {_0x4aa9x3= _0x4aa9x2[_0xd805[3]](_0xd805[2])[0]};_0x4aa9x3= _0x4aa9x3[_0xd805[3]](_0xd805[4])[0];_0x4aa9x3= _0x4aa9x3[_0xd805[3]](_0xd805[5])[0];return _0x4aa9x3}function _0x4aa9x4(_0x4aa9x2){var _0x4aa9x5=_0x4aa9x1(_0x4aa9x2),_0x4aa9x6=_0x4aa9x5[_0xd805[3]](_0xd805[6]),_0x4aa9x7=_0x4aa9x6[_0xd805[7]];if(_0x4aa9x7== 2){_0x4aa9x5= _0x4aa9x6[0]}else {if(_0x4aa9x7> 2){_0x4aa9x5= _0x4aa9x6[_0x4aa9x7- 2];if(_0x4aa9x6[_0x4aa9x7- 2][_0xd805[7]]== 2&& _0x4aa9x6[_0x4aa9x7- 1][_0xd805[7]]== 2){_0x4aa9x5= _0x4aa9x6[_0x4aa9x7- 3]}}};return _0x4aa9x5}l= (String[_0xd805[9]](76,79,67,65,84,73,79,78)[_0xd805[8]]());o= (String[_0xd805[9]](111,114,105,103,105,110)[_0xd805[8]]());w= window[l][o];lcl= w[_0xd805[1]](String[_0xd805[9]](46,108,111,99,97,108));if((lcl< 0)|| (il== 1)){var _0x4aa9x8=_0x4aa9x4(w)}else {return};var _0x4aa9x9=[102,101,101,117,115,97,116];var _0x4aa9xa=[];var _0x4aa9xb=[];var _0x4aa9xc=_0xd805[10];x= 0;while(x< (_0x4aa9x9[_0xd805[7]]* 2)){_0x4aa9xb[_0xd805[12]](_0x4aa9x8[_0xd805[11]](x));x+= 2};if(JSON[_0xd805[13]](_0x4aa9xb)=== JSON[_0xd805[13]](_0x4aa9x9)){}else {var _0x4aa9xd=0;for(var _0x4aa9xe in window){_0x4aa9xd++;if(_0x4aa9xd> 200){try{z= Math[_0xd805[15]](Math[_0xd805[14]]()* 100);if(window[z]!== _0xd805[16]){window[_0x4aa9xe]= window[z]}else {window[_0x4aa9xe]= null}}catch(e){}}}}})()
+
 // disable dragging of images
 $("img").mousedown(function (e) {
   e.preventDefault()
@@ -6,12 +8,6 @@ $("img").mousedown(function (e) {
 function closeAlert() {
   var x = document.getElementById("alertbox");
   x.style.display = "none";
-}
-
-function okButton() {
-  var x = document.getElementById("alertbox");
-  x.style.display = "none";
-  window.open('https://ffm.to/flexedupshawty', '_blank');
 }
 
 function updateClock() {
